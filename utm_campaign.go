@@ -2,14 +2,26 @@ package odoo
 
 // UtmCampaign represents utm.campaign model.
 type UtmCampaign struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omitempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omitempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omitempty"`
-	DisplayName *String   `xmlrpc:"display_name,omitempty"`
-	Id          *Int      `xmlrpc:"id,omitempty"`
-	Name        *String   `xmlrpc:"name,omitempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omitempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omitempty"`
+	Active         *Bool     `xmlrpc:"active,omitempty"`
+	Color          *Int      `xmlrpc:"color,omitempty"`
+	CompanyId      *Many2One `xmlrpc:"company_id,omitempty"`
+	CreateDate     *Time     `xmlrpc:"create_date,omitempty"`
+	CreateUid      *Many2One `xmlrpc:"create_uid,omitempty"`
+	CrmLeadCount   *Int      `xmlrpc:"crm_lead_count,omitempty"`
+	CurrencyId     *Many2One `xmlrpc:"currency_id,omitempty"`
+	DisplayName    *String   `xmlrpc:"display_name,omitempty"`
+	Id             *Int      `xmlrpc:"id,omitempty"`
+	InvoicedAmount *Int      `xmlrpc:"invoiced_amount,omitempty"`
+	IsAutoCampaign *Bool     `xmlrpc:"is_auto_campaign,omitempty"`
+	Name           *String   `xmlrpc:"name,omitempty"`
+	QuotationCount *Int      `xmlrpc:"quotation_count,omitempty"`
+	StageId        *Many2One `xmlrpc:"stage_id,omitempty"`
+	TagIds         *Relation `xmlrpc:"tag_ids,omitempty"`
+	Title          *String   `xmlrpc:"title,omitempty"`
+	UseLeads       *Bool     `xmlrpc:"use_leads,omitempty"`
+	UserId         *Many2One `xmlrpc:"user_id,omitempty"`
+	WriteDate      *Time     `xmlrpc:"write_date,omitempty"`
+	WriteUid       *Many2One `xmlrpc:"write_uid,omitempty"`
 }
 
 // UtmCampaigns represents array of utm.campaign model.
@@ -35,7 +47,7 @@ func (c *Client) CreateUtmCampaign(uc *UtmCampaign) (int64, error) {
 	return ids[0], nil
 }
 
-// CreateUtmCampaigns creates a new utm.campaign model and returns its id.
+// CreateUtmCampaign creates a new utm.campaign model and returns its id.
 func (c *Client) CreateUtmCampaigns(ucs []*UtmCampaign) ([]int64, error) {
 	var vv []interface{}
 	for _, v := range ucs {
