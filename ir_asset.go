@@ -2,22 +2,19 @@ package odoo
 
 // IrAsset represents ir.asset model.
 type IrAsset struct {
-	Active          *Bool      `xmlrpc:"active,omitempty"`
-	Bundle          *String    `xmlrpc:"bundle,omitempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omitempty"`
-	Directive       *Selection `xmlrpc:"directive,omitempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omitempty"`
-	Id              *Int       `xmlrpc:"id,omitempty"`
-	Key             *String    `xmlrpc:"key,omitempty"`
-	Name            *String    `xmlrpc:"name,omitempty"`
-	Path            *String    `xmlrpc:"path,omitempty"`
-	Sequence        *Int       `xmlrpc:"sequence,omitempty"`
-	Target          *String    `xmlrpc:"target,omitempty"`
-	ThemeTemplateId *Many2One  `xmlrpc:"theme_template_id,omitempty"`
-	WebsiteId       *Many2One  `xmlrpc:"website_id,omitempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omitempty"`
+	Active      *Bool      `xmlrpc:"active,omitempty"`
+	Bundle      *String    `xmlrpc:"bundle,omitempty"`
+	CreateDate  *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid   *Many2One  `xmlrpc:"create_uid,omitempty"`
+	Directive   *Selection `xmlrpc:"directive,omitempty"`
+	DisplayName *String    `xmlrpc:"display_name,omitempty"`
+	Id          *Int       `xmlrpc:"id,omitempty"`
+	Name        *String    `xmlrpc:"name,omitempty"`
+	Path        *String    `xmlrpc:"path,omitempty"`
+	Sequence    *Int       `xmlrpc:"sequence,omitempty"`
+	Target      *String    `xmlrpc:"target,omitempty"`
+	WriteDate   *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid    *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // IrAssets represents array of ir.asset model.

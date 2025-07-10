@@ -46,6 +46,7 @@ type StockLot struct {
 	PurchaseOrderIds            *Relation   `xmlrpc:"purchase_order_ids,omitempty"`
 	QuantIds                    *Relation   `xmlrpc:"quant_ids,omitempty"`
 	QuantitySvl                 *Float      `xmlrpc:"quantity_svl,omitempty"`
+	RatingIds                   *Relation   `xmlrpc:"rating_ids,omitempty"`
 	Ref                         *String     `xmlrpc:"ref,omitempty"`
 	SaleOrderCount              *Int        `xmlrpc:"sale_order_count,omitempty"`
 	SaleOrderIds                *Relation   `xmlrpc:"sale_order_ids,omitempty"`

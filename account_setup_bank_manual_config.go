@@ -51,6 +51,7 @@ type AccountSetupBankManualConfig struct {
 	PartnerCustomerRank             *Int       `xmlrpc:"partner_customer_rank,omitempty"`
 	PartnerId                       *Many2One  `xmlrpc:"partner_id,omitempty"`
 	PartnerSupplierRank             *Int       `xmlrpc:"partner_supplier_rank,omitempty"`
+	RatingIds                       *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RelatedMoves                    *Relation  `xmlrpc:"related_moves,omitempty"`
 	ResPartnerBankId                *Many2One  `xmlrpc:"res_partner_bank_id,omitempty"`
 	SanitizedAccNumber              *String    `xmlrpc:"sanitized_acc_number,omitempty"`

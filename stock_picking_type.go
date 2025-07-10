@@ -3,6 +3,7 @@ package odoo
 // StockPickingType represents stock.picking.type model.
 type StockPickingType struct {
 	Active                         *Bool       `xmlrpc:"active,omitempty"`
+	AnalyticCosts                  *Bool       `xmlrpc:"analytic_costs,omitempty"`
 	AutoPrintDeliverySlip          *Bool       `xmlrpc:"auto_print_delivery_slip,omitempty"`
 	AutoPrintLotLabels             *Bool       `xmlrpc:"auto_print_lot_labels,omitempty"`
 	AutoPrintPackageLabel          *Bool       `xmlrpc:"auto_print_package_label,omitempty"`

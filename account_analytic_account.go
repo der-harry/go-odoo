@@ -30,7 +30,10 @@ type AccountAnalyticAccount struct {
 	Name                     *String   `xmlrpc:"name,omitempty"`
 	PartnerId                *Many2One `xmlrpc:"partner_id,omitempty"`
 	PlanId                   *Many2One `xmlrpc:"plan_id,omitempty"`
+	ProjectCount             *Int      `xmlrpc:"project_count,omitempty"`
+	ProjectIds               *Relation `xmlrpc:"project_ids,omitempty"`
 	PurchaseOrderCount       *Int      `xmlrpc:"purchase_order_count,omitempty"`
+	RatingIds                *Relation `xmlrpc:"rating_ids,omitempty"`
 	RootPlanId               *Many2One `xmlrpc:"root_plan_id,omitempty"`
 	VendorBillCount          *Int      `xmlrpc:"vendor_bill_count,omitempty"`
 	WebsiteMessageIds        *Relation `xmlrpc:"website_message_ids,omitempty"`

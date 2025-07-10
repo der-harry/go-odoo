@@ -20,8 +20,6 @@ type SaleOrderLine struct {
 	DisplayQtyWidget                  *Bool       `xmlrpc:"display_qty_widget,omitempty"`
 	DisplayType                       *Selection  `xmlrpc:"display_type,omitempty"`
 	DistributionAnalyticAccountIds    *Relation   `xmlrpc:"distribution_analytic_account_ids,omitempty"`
-	EventId                           *Many2One   `xmlrpc:"event_id,omitempty"`
-	EventTicketId                     *Many2One   `xmlrpc:"event_ticket_id,omitempty"`
 	ForecastExpectedDate              *Time       `xmlrpc:"forecast_expected_date,omitempty"`
 	FreeQtyToday                      *Float      `xmlrpc:"free_qty_today,omitempty"`
 	Id                                *Int        `xmlrpc:"id,omitempty"`
@@ -32,12 +30,11 @@ type SaleOrderLine struct {
 	IsExpense                         *Bool       `xmlrpc:"is_expense,omitempty"`
 	IsMto                             *Bool       `xmlrpc:"is_mto,omitempty"`
 	IsProductArchived                 *Bool       `xmlrpc:"is_product_archived,omitempty"`
+	IsService                         *Bool       `xmlrpc:"is_service,omitempty"`
 	IsStorable                        *Bool       `xmlrpc:"is_storable,omitempty"`
 	LinkedLineId                      *Many2One   `xmlrpc:"linked_line_id,omitempty"`
 	LinkedLineIds                     *Relation   `xmlrpc:"linked_line_ids,omitempty"`
 	LinkedVirtualId                   *String     `xmlrpc:"linked_virtual_id,omitempty"`
-	Margin                            *Float      `xmlrpc:"margin,omitempty"`
-	MarginPercent                     *Float      `xmlrpc:"margin_percent,omitempty"`
 	MoveIds                           *Relation   `xmlrpc:"move_ids,omitempty"`
 	Name                              *String     `xmlrpc:"name,omitempty"`
 	OrderId                           *Many2One   `xmlrpc:"order_id,omitempty"`
@@ -49,7 +46,6 @@ type SaleOrderLine struct {
 	PriceTotal                        *Float      `xmlrpc:"price_total,omitempty"`
 	PriceUnit                         *Float      `xmlrpc:"price_unit,omitempty"`
 	PricelistItemId                   *Many2One   `xmlrpc:"pricelist_item_id,omitempty"`
-	ProductAddMode                    *Selection  `xmlrpc:"product_add_mode,omitempty"`
 	ProductCustomAttributeValueIds    *Relation   `xmlrpc:"product_custom_attribute_value_ids,omitempty"`
 	ProductDocumentIds                *Relation   `xmlrpc:"product_document_ids,omitempty"`
 	ProductId                         *Many2One   `xmlrpc:"product_id,omitempty"`
@@ -64,9 +60,9 @@ type SaleOrderLine struct {
 	ProductUomQty                     *Float      `xmlrpc:"product_uom_qty,omitempty"`
 	ProductUomReadonly                *Bool       `xmlrpc:"product_uom_readonly,omitempty"`
 	ProductUpdatable                  *Bool       `xmlrpc:"product_updatable,omitempty"`
+	ProjectId                         *Many2One   `xmlrpc:"project_id,omitempty"`
 	PurchaseLineCount                 *Int        `xmlrpc:"purchase_line_count,omitempty"`
 	PurchaseLineIds                   *Relation   `xmlrpc:"purchase_line_ids,omitempty"`
-	PurchasePrice                     *Float      `xmlrpc:"purchase_price,omitempty"`
 	QtyAvailableToday                 *Float      `xmlrpc:"qty_available_today,omitempty"`
 	QtyDelivered                      *Float      `xmlrpc:"qty_delivered,omitempty"`
 	QtyDeliveredMethod                *Selection  `xmlrpc:"qty_delivered_method,omitempty"`
@@ -74,7 +70,7 @@ type SaleOrderLine struct {
 	QtyInvoicedPosted                 *Float      `xmlrpc:"qty_invoiced_posted,omitempty"`
 	QtyToDeliver                      *Float      `xmlrpc:"qty_to_deliver,omitempty"`
 	QtyToInvoice                      *Float      `xmlrpc:"qty_to_invoice,omitempty"`
-	RegistrationIds                   *Relation   `xmlrpc:"registration_ids,omitempty"`
+	ReachedMilestonesIds              *Relation   `xmlrpc:"reached_milestones_ids,omitempty"`
 	RouteId                           *Many2One   `xmlrpc:"route_id,omitempty"`
 	SaleOrderOptionIds                *Relation   `xmlrpc:"sale_order_option_ids,omitempty"`
 	SalesmanId                        *Many2One   `xmlrpc:"salesman_id,omitempty"`
@@ -83,6 +79,7 @@ type SaleOrderLine struct {
 	Sequence                          *Int        `xmlrpc:"sequence,omitempty"`
 	ServiceTracking                   *Selection  `xmlrpc:"service_tracking,omitempty"`
 	State                             *Selection  `xmlrpc:"state,omitempty"`
+	TaskId                            *Many2One   `xmlrpc:"task_id,omitempty"`
 	TaxCalculationRoundingMethod      *Selection  `xmlrpc:"tax_calculation_rounding_method,omitempty"`
 	TaxCountryId                      *Many2One   `xmlrpc:"tax_country_id,omitempty"`
 	TaxId                             *Relation   `xmlrpc:"tax_id,omitempty"`

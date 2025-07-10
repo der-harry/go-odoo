@@ -16,7 +16,6 @@ type SaleReport struct {
 	IndustryId             *Many2One  `xmlrpc:"industry_id,omitempty"`
 	InvoiceStatus          *Selection `xmlrpc:"invoice_status,omitempty"`
 	LineInvoiceStatus      *Selection `xmlrpc:"line_invoice_status,omitempty"`
-	Margin                 *Float     `xmlrpc:"margin,omitempty"`
 	MediumId               *Many2One  `xmlrpc:"medium_id,omitempty"`
 	Name                   *String    `xmlrpc:"name,omitempty"`
 	Nbr                    *Int       `xmlrpc:"nbr,omitempty"`
@@ -31,6 +30,7 @@ type SaleReport struct {
 	ProductTmplId          *Many2One  `xmlrpc:"product_tmpl_id,omitempty"`
 	ProductUom             *Many2One  `xmlrpc:"product_uom,omitempty"`
 	ProductUomQty          *Float     `xmlrpc:"product_uom_qty,omitempty"`
+	ProjectId              *Many2One  `xmlrpc:"project_id,omitempty"`
 	QtyDelivered           *Float     `xmlrpc:"qty_delivered,omitempty"`
 	QtyInvoiced            *Float     `xmlrpc:"qty_invoiced,omitempty"`
 	QtyToDeliver           *Float     `xmlrpc:"qty_to_deliver,omitempty"`

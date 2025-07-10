@@ -20,6 +20,8 @@ type DigestDigest struct {
 	KpiCrmOpportunitiesWonValue *Int       `xmlrpc:"kpi_crm_opportunities_won_value,omitempty"`
 	KpiMailMessageTotal         *Bool      `xmlrpc:"kpi_mail_message_total,omitempty"`
 	KpiMailMessageTotalValue    *Int       `xmlrpc:"kpi_mail_message_total_value,omitempty"`
+	KpiProjectTaskOpened        *Bool      `xmlrpc:"kpi_project_task_opened,omitempty"`
+	KpiProjectTaskOpenedValue   *Int       `xmlrpc:"kpi_project_task_opened_value,omitempty"`
 	KpiResUsersConnected        *Bool      `xmlrpc:"kpi_res_users_connected,omitempty"`
 	KpiResUsersConnectedValue   *Int       `xmlrpc:"kpi_res_users_connected_value,omitempty"`
 	Name                        *String    `xmlrpc:"name,omitempty"`

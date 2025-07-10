@@ -53,6 +53,7 @@ type CalendarEvent struct {
 	PartnerId                *Many2One  `xmlrpc:"partner_id,omitempty"`
 	PartnerIds               *Relation  `xmlrpc:"partner_ids,omitempty"`
 	Privacy                  *Selection `xmlrpc:"privacy,omitempty"`
+	RatingIds                *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RecurrenceId             *Many2One  `xmlrpc:"recurrence_id,omitempty"`
 	RecurrenceUpdate         *Selection `xmlrpc:"recurrence_update,omitempty"`
 	Recurrency               *Bool      `xmlrpc:"recurrency,omitempty"`

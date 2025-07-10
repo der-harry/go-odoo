@@ -21,7 +21,6 @@ type QuotationDocument struct {
 	ImageWidth           *Int       `xmlrpc:"image_width,omitempty"`
 	IndexContent         *String    `xmlrpc:"index_content,omitempty"`
 	IrAttachmentId       *Many2One  `xmlrpc:"ir_attachment_id,omitempty"`
-	Key                  *String    `xmlrpc:"key,omitempty"`
 	LocalUrl             *String    `xmlrpc:"local_url,omitempty"`
 	Mimetype             *String    `xmlrpc:"mimetype,omitempty"`
 	Name                 *String    `xmlrpc:"name,omitempty"`
@@ -35,11 +34,9 @@ type QuotationDocument struct {
 	ResName              *String    `xmlrpc:"res_name,omitempty"`
 	Sequence             *Int       `xmlrpc:"sequence,omitempty"`
 	StoreFname           *String    `xmlrpc:"store_fname,omitempty"`
-	ThemeTemplateId      *Many2One  `xmlrpc:"theme_template_id,omitempty"`
 	Type                 *Selection `xmlrpc:"type,omitempty"`
 	Url                  *String    `xmlrpc:"url,omitempty"`
 	VoiceIds             *Relation  `xmlrpc:"voice_ids,omitempty"`
-	WebsiteId            *Many2One  `xmlrpc:"website_id,omitempty"`
 	WriteDate            *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid             *Many2One  `xmlrpc:"write_uid,omitempty"`
 }

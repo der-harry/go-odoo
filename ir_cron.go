@@ -64,9 +64,6 @@ type IrCron struct {
 	WebhookFieldIds               *Relation  `xmlrpc:"webhook_field_ids,omitempty"`
 	WebhookSamplePayload          *String    `xmlrpc:"webhook_sample_payload,omitempty"`
 	WebhookUrl                    *String    `xmlrpc:"webhook_url,omitempty"`
-	WebsitePath                   *String    `xmlrpc:"website_path,omitempty"`
-	WebsitePublished              *Bool      `xmlrpc:"website_published,omitempty"`
-	WebsiteUrl                    *String    `xmlrpc:"website_url,omitempty"`
 	WriteDate                     *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                      *Many2One  `xmlrpc:"write_uid,omitempty"`
 	XmlId                         *String    `xmlrpc:"xml_id,omitempty"`

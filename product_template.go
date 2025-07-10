@@ -72,7 +72,6 @@ type ProductTemplate struct {
 	OutgoingQty                            *Float      `xmlrpc:"outgoing_qty,omitempty"`
 	PackagingIds                           *Relation   `xmlrpc:"packaging_ids,omitempty"`
 	PricelistItemCount                     *Int        `xmlrpc:"pricelist_item_count,omitempty"`
-	ProductAddMode                         *Selection  `xmlrpc:"product_add_mode,omitempty"`
 	ProductDocumentCount                   *Int        `xmlrpc:"product_document_count,omitempty"`
 	ProductDocumentIds                     *Relation   `xmlrpc:"product_document_ids,omitempty"`
 	ProductProperties                      interface{} `xmlrpc:"product_properties,omitempty"`
@@ -81,6 +80,8 @@ type ProductTemplate struct {
 	ProductVariantCount                    *Int        `xmlrpc:"product_variant_count,omitempty"`
 	ProductVariantId                       *Many2One   `xmlrpc:"product_variant_id,omitempty"`
 	ProductVariantIds                      *Relation   `xmlrpc:"product_variant_ids,omitempty"`
+	ProjectId                              *Many2One   `xmlrpc:"project_id,omitempty"`
+	ProjectTemplateId                      *Many2One   `xmlrpc:"project_template_id,omitempty"`
 	PropertyAccountCreditorPriceDifference *Many2One   `xmlrpc:"property_account_creditor_price_difference,omitempty"`
 	PropertyAccountExpenseId               *Many2One   `xmlrpc:"property_account_expense_id,omitempty"`
 	PropertyAccountIncomeId                *Many2One   `xmlrpc:"property_account_income_id,omitempty"`
@@ -92,6 +93,7 @@ type ProductTemplate struct {
 	PurchaseOk                             *Bool       `xmlrpc:"purchase_ok,omitempty"`
 	PurchasedProductQty                    *Float      `xmlrpc:"purchased_product_qty,omitempty"`
 	QtyAvailable                           *Float      `xmlrpc:"qty_available,omitempty"`
+	RatingIds                              *Relation   `xmlrpc:"rating_ids,omitempty"`
 	ReorderingMaxQty                       *Float      `xmlrpc:"reordering_max_qty,omitempty"`
 	ReorderingMinQty                       *Float      `xmlrpc:"reordering_min_qty,omitempty"`
 	ResponsibleId                          *Many2One   `xmlrpc:"responsible_id,omitempty"`
@@ -104,6 +106,7 @@ type ProductTemplate struct {
 	SalesCount                             *Float      `xmlrpc:"sales_count,omitempty"`
 	SellerIds                              *Relation   `xmlrpc:"seller_ids,omitempty"`
 	Sequence                               *Int        `xmlrpc:"sequence,omitempty"`
+	ServicePolicy                          *Selection  `xmlrpc:"service_policy,omitempty"`
 	ServiceToPurchase                      *Bool       `xmlrpc:"service_to_purchase,omitempty"`
 	ServiceTracking                        *Selection  `xmlrpc:"service_tracking,omitempty"`
 	ServiceType                            *Selection  `xmlrpc:"service_type,omitempty"`

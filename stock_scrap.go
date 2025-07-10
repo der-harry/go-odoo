@@ -30,6 +30,7 @@ type StockScrap struct {
 	ProductId                *Many2One  `xmlrpc:"product_id,omitempty"`
 	ProductUomCategoryId     *Many2One  `xmlrpc:"product_uom_category_id,omitempty"`
 	ProductUomId             *Many2One  `xmlrpc:"product_uom_id,omitempty"`
+	RatingIds                *Relation  `xmlrpc:"rating_ids,omitempty"`
 	ScrapLocationId          *Many2One  `xmlrpc:"scrap_location_id,omitempty"`
 	ScrapQty                 *Float     `xmlrpc:"scrap_qty,omitempty"`
 	ScrapReasonTagIds        *Relation  `xmlrpc:"scrap_reason_tag_ids,omitempty"`

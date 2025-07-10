@@ -12,7 +12,6 @@ type PaymentTransaction struct {
 	Id                  *Int       `xmlrpc:"id,omitempty"`
 	InvoiceIds          *Relation  `xmlrpc:"invoice_ids,omitempty"`
 	InvoicesCount       *Int       `xmlrpc:"invoices_count,omitempty"`
-	IsDonation          *Bool      `xmlrpc:"is_donation,omitempty"`
 	IsPostProcessed     *Bool      `xmlrpc:"is_post_processed,omitempty"`
 	LandingRoute        *String    `xmlrpc:"landing_route,omitempty"`
 	LastStateChange     *Time      `xmlrpc:"last_state_change,omitempty"`

@@ -77,6 +77,7 @@ type AccountJournal struct {
 	OutboundPaymentMethodLineIds *Relation  `xmlrpc:"outbound_payment_method_line_ids,omitempty"`
 	PaymentSequence              *Bool      `xmlrpc:"payment_sequence,omitempty"`
 	ProfitAccountId              *Many2One  `xmlrpc:"profit_account_id,omitempty"`
+	RatingIds                    *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RefundSequence               *Bool      `xmlrpc:"refund_sequence,omitempty"`
 	RestrictModeHashTable        *Bool      `xmlrpc:"restrict_mode_hash_table,omitempty"`
 	SelectedPaymentMethodCodes   *String    `xmlrpc:"selected_payment_method_codes,omitempty"`

@@ -33,7 +33,6 @@ type AccountPayment struct {
 	HasMessage                      *Bool      `xmlrpc:"has_message,omitempty"`
 	Id                              *Int       `xmlrpc:"id,omitempty"`
 	InvoiceIds                      *Relation  `xmlrpc:"invoice_ids,omitempty"`
-	IsDonation                      *Bool      `xmlrpc:"is_donation,omitempty"`
 	IsMatched                       *Bool      `xmlrpc:"is_matched,omitempty"`
 	IsReconciled                    *Bool      `xmlrpc:"is_reconciled,omitempty"`
 	IsSent                          *Bool      `xmlrpc:"is_sent,omitempty"`
@@ -68,6 +67,7 @@ type AccountPayment struct {
 	PaymentTransactionId            *Many2One  `xmlrpc:"payment_transaction_id,omitempty"`
 	PaymentType                     *Selection `xmlrpc:"payment_type,omitempty"`
 	QrCode                          *String    `xmlrpc:"qr_code,omitempty"`
+	RatingIds                       *Relation  `xmlrpc:"rating_ids,omitempty"`
 	ReconciledBillIds               *Relation  `xmlrpc:"reconciled_bill_ids,omitempty"`
 	ReconciledBillsCount            *Int       `xmlrpc:"reconciled_bills_count,omitempty"`
 	ReconciledInvoiceIds            *Relation  `xmlrpc:"reconciled_invoice_ids,omitempty"`

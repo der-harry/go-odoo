@@ -22,14 +22,15 @@ type SaleOrder struct {
 	AmountTotal                  *Float      `xmlrpc:"amount_total,omitempty"`
 	AmountUndiscounted           *Float      `xmlrpc:"amount_undiscounted,omitempty"`
 	AmountUntaxed                *Float      `xmlrpc:"amount_untaxed,omitempty"`
-	AttendeeCount                *Int        `xmlrpc:"attendee_count,omitempty"`
 	AuthorizedTransactionIds     *Relation   `xmlrpc:"authorized_transaction_ids,omitempty"`
 	AvailableProductDocumentIds  *Relation   `xmlrpc:"available_product_document_ids,omitempty"`
 	CampaignId                   *Many2One   `xmlrpc:"campaign_id,omitempty"`
 	ClientOrderRef               *String     `xmlrpc:"client_order_ref,omitempty"`
+	ClosedTaskCount              *Int        `xmlrpc:"closed_task_count,omitempty"`
 	CommitmentDate               *Time       `xmlrpc:"commitment_date,omitempty"`
 	CompanyId                    *Many2One   `xmlrpc:"company_id,omitempty"`
 	CompanyPriceInclude          *Selection  `xmlrpc:"company_price_include,omitempty"`
+	CompletedTaskPercentage      *Float      `xmlrpc:"completed_task_percentage,omitempty"`
 	CountryCode                  *String     `xmlrpc:"country_code,omitempty"`
 	CreateDate                   *Time       `xmlrpc:"create_date,omitempty"`
 	CreateUid                    *Many2One   `xmlrpc:"create_uid,omitempty"`
@@ -44,9 +45,6 @@ type SaleOrder struct {
 	EffectiveDate                *Time       `xmlrpc:"effective_date,omitempty"`
 	ExpectedDate                 *Time       `xmlrpc:"expected_date,omitempty"`
 	FiscalPositionId             *Many2One   `xmlrpc:"fiscal_position_id,omitempty"`
-	Grid                         *String     `xmlrpc:"grid,omitempty"`
-	GridProductTmplId            *Many2One   `xmlrpc:"grid_product_tmpl_id,omitempty"`
-	GridUpdate                   *Bool       `xmlrpc:"grid_update,omitempty"`
 	HasActivePricelist           *Bool       `xmlrpc:"has_active_pricelist,omitempty"`
 	HasArchivedProducts          *Bool       `xmlrpc:"has_archived_products,omitempty"`
 	HasMessage                   *Bool       `xmlrpc:"has_message,omitempty"`
@@ -58,11 +56,10 @@ type SaleOrder struct {
 	InvoiceStatus                *Selection  `xmlrpc:"invoice_status,omitempty"`
 	IsExpired                    *Bool       `xmlrpc:"is_expired,omitempty"`
 	IsPdfQuoteBuilderAvailable   *Bool       `xmlrpc:"is_pdf_quote_builder_available,omitempty"`
+	IsProductMilestone           *Bool       `xmlrpc:"is_product_milestone,omitempty"`
 	JournalId                    *Many2One   `xmlrpc:"journal_id,omitempty"`
 	JsonPopover                  *String     `xmlrpc:"json_popover,omitempty"`
 	Locked                       *Bool       `xmlrpc:"locked,omitempty"`
-	Margin                       *Float      `xmlrpc:"margin,omitempty"`
-	MarginPercent                *Float      `xmlrpc:"margin_percent,omitempty"`
 	MediumId                     *Many2One   `xmlrpc:"medium_id,omitempty"`
 	MessageAttachmentCount       *Int        `xmlrpc:"message_attachment_count,omitempty"`
 	MessageFollowerIds           *Relation   `xmlrpc:"message_follower_ids,omitempty"`
@@ -74,6 +71,7 @@ type SaleOrder struct {
 	MessageNeedaction            *Bool       `xmlrpc:"message_needaction,omitempty"`
 	MessageNeedactionCounter     *Int        `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds            *Relation   `xmlrpc:"message_partner_ids,omitempty"`
+	MilestoneCount               *Int        `xmlrpc:"milestone_count,omitempty"`
 	MyActivityDateDeadline       *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                         *String     `xmlrpc:"name,omitempty"`
 	Note                         *String     `xmlrpc:"note,omitempty"`
@@ -91,15 +89,22 @@ type SaleOrder struct {
 	PrepaymentPercent            *Float      `xmlrpc:"prepayment_percent,omitempty"`
 	PricelistId                  *Many2One   `xmlrpc:"pricelist_id,omitempty"`
 	ProcurementGroupId           *Many2One   `xmlrpc:"procurement_group_id,omitempty"`
+	ProjectAccountId             *Many2One   `xmlrpc:"project_account_id,omitempty"`
+	ProjectCount                 *Int        `xmlrpc:"project_count,omitempty"`
+	ProjectId                    *Many2One   `xmlrpc:"project_id,omitempty"`
+	ProjectIds                   *Relation   `xmlrpc:"project_ids,omitempty"`
 	PurchaseOrderCount           *Int        `xmlrpc:"purchase_order_count,omitempty"`
 	QuotationDocumentIds         *Relation   `xmlrpc:"quotation_document_ids,omitempty"`
+	RatingIds                    *Relation   `xmlrpc:"rating_ids,omitempty"`
 	Reference                    *String     `xmlrpc:"reference,omitempty"`
-	ReportGrids                  *Bool       `xmlrpc:"report_grids,omitempty"`
 	RequirePayment               *Bool       `xmlrpc:"require_payment,omitempty"`
 	RequireSignature             *Bool       `xmlrpc:"require_signature,omitempty"`
 	SaleOrderOptionIds           *Relation   `xmlrpc:"sale_order_option_ids,omitempty"`
 	SaleOrderTemplateId          *Many2One   `xmlrpc:"sale_order_template_id,omitempty"`
+	ShowCreateProjectButton      *Bool       `xmlrpc:"show_create_project_button,omitempty"`
 	ShowJsonPopover              *Bool       `xmlrpc:"show_json_popover,omitempty"`
+	ShowProjectButton            *Bool       `xmlrpc:"show_project_button,omitempty"`
+	ShowTaskButton               *Bool       `xmlrpc:"show_task_button,omitempty"`
 	ShowUpdateFpos               *Bool       `xmlrpc:"show_update_fpos,omitempty"`
 	ShowUpdatePricelist          *Bool       `xmlrpc:"show_update_pricelist,omitempty"`
 	Signature                    *String     `xmlrpc:"signature,omitempty"`
@@ -108,6 +113,8 @@ type SaleOrder struct {
 	SourceId                     *Many2One   `xmlrpc:"source_id,omitempty"`
 	State                        *Selection  `xmlrpc:"state,omitempty"`
 	TagIds                       *Relation   `xmlrpc:"tag_ids,omitempty"`
+	TasksCount                   *Int        `xmlrpc:"tasks_count,omitempty"`
+	TasksIds                     *Relation   `xmlrpc:"tasks_ids,omitempty"`
 	TaxCalculationRoundingMethod *Selection  `xmlrpc:"tax_calculation_rounding_method,omitempty"`
 	TaxCountryId                 *Many2One   `xmlrpc:"tax_country_id,omitempty"`
 	TaxTotals                    *String     `xmlrpc:"tax_totals,omitempty"`
@@ -117,6 +124,7 @@ type SaleOrder struct {
 	TypeName                     *String     `xmlrpc:"type_name,omitempty"`
 	UserId                       *Many2One   `xmlrpc:"user_id,omitempty"`
 	ValidityDate                 *Time       `xmlrpc:"validity_date,omitempty"`
+	VisibleProject               *Bool       `xmlrpc:"visible_project,omitempty"`
 	WarehouseId                  *Many2One   `xmlrpc:"warehouse_id,omitempty"`
 	WebsiteMessageIds            *Relation   `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                    *Time       `xmlrpc:"write_date,omitempty"`

@@ -22,6 +22,7 @@ type IapAccount struct {
 	MessageNeedactionCounter *Int       `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds        *Relation  `xmlrpc:"message_partner_ids,omitempty"`
 	Name                     *String    `xmlrpc:"name,omitempty"`
+	RatingIds                *Relation  `xmlrpc:"rating_ids,omitempty"`
 	SenderName               *String    `xmlrpc:"sender_name,omitempty"`
 	ServiceId                *Many2One  `xmlrpc:"service_id,omitempty"`
 	ServiceLocked            *Bool      `xmlrpc:"service_locked,omitempty"`

@@ -42,8 +42,6 @@ type CrmLead struct {
 	EmailFrom                       *String     `xmlrpc:"email_from,omitempty"`
 	EmailNormalized                 *String     `xmlrpc:"email_normalized,omitempty"`
 	EmailState                      *Selection  `xmlrpc:"email_state,omitempty"`
-	EventId                         *Many2One   `xmlrpc:"event_id,omitempty"`
-	EventLeadRuleId                 *Many2One   `xmlrpc:"event_lead_rule_id,omitempty"`
 	ExpectedRevenue                 *Float      `xmlrpc:"expected_revenue,omitempty"`
 	Function                        *String     `xmlrpc:"function,omitempty"`
 	HasMessage                      *Bool       `xmlrpc:"has_message,omitempty"`
@@ -92,14 +90,13 @@ type CrmLead struct {
 	Probability                     *Float      `xmlrpc:"probability,omitempty"`
 	ProratedRevenue                 *Float      `xmlrpc:"prorated_revenue,omitempty"`
 	QuotationCount                  *Int        `xmlrpc:"quotation_count,omitempty"`
+	RatingIds                       *Relation   `xmlrpc:"rating_ids,omitempty"`
 	RecurringPlan                   *Many2One   `xmlrpc:"recurring_plan,omitempty"`
 	RecurringRevenue                *Float      `xmlrpc:"recurring_revenue,omitempty"`
 	RecurringRevenueMonthly         *Float      `xmlrpc:"recurring_revenue_monthly,omitempty"`
 	RecurringRevenueMonthlyProrated *Float      `xmlrpc:"recurring_revenue_monthly_prorated,omitempty"`
 	RecurringRevenueProrated        *Float      `xmlrpc:"recurring_revenue_prorated,omitempty"`
 	Referred                        *String     `xmlrpc:"referred,omitempty"`
-	RegistrationCount               *Int        `xmlrpc:"registration_count,omitempty"`
-	RegistrationIds                 *Relation   `xmlrpc:"registration_ids,omitempty"`
 	RevealId                        *String     `xmlrpc:"reveal_id,omitempty"`
 	SaleAmountTotal                 *Float      `xmlrpc:"sale_amount_total,omitempty"`
 	SaleOrderCount                  *Int        `xmlrpc:"sale_order_count,omitempty"`
@@ -115,8 +112,6 @@ type CrmLead struct {
 	Type                            *Selection  `xmlrpc:"type,omitempty"`
 	UserCompanyIds                  *Relation   `xmlrpc:"user_company_ids,omitempty"`
 	UserId                          *Many2One   `xmlrpc:"user_id,omitempty"`
-	VisitorIds                      *Relation   `xmlrpc:"visitor_ids,omitempty"`
-	VisitorPageCount                *Int        `xmlrpc:"visitor_page_count,omitempty"`
 	Website                         *String     `xmlrpc:"website,omitempty"`
 	WebsiteMessageIds               *Relation   `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                       *Time       `xmlrpc:"write_date,omitempty"`

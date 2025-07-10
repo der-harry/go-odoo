@@ -71,7 +71,9 @@ type StockPicking struct {
 	ProductId                   *Many2One   `xmlrpc:"product_id,omitempty"`
 	ProductsAvailability        *String     `xmlrpc:"products_availability,omitempty"`
 	ProductsAvailabilityState   *Selection  `xmlrpc:"products_availability_state,omitempty"`
+	ProjectId                   *Many2One   `xmlrpc:"project_id,omitempty"`
 	PurchaseId                  *Many2One   `xmlrpc:"purchase_id,omitempty"`
+	RatingIds                   *Relation   `xmlrpc:"rating_ids,omitempty"`
 	ReturnCount                 *Int        `xmlrpc:"return_count,omitempty"`
 	ReturnId                    *Many2One   `xmlrpc:"return_id,omitempty"`
 	ReturnIds                   *Relation   `xmlrpc:"return_ids,omitempty"`

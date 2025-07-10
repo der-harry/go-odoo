@@ -73,6 +73,8 @@ type PurchaseOrder struct {
 	PickingTypeId                *Many2One  `xmlrpc:"picking_type_id,omitempty"`
 	Priority                     *Selection `xmlrpc:"priority,omitempty"`
 	ProductId                    *Many2One  `xmlrpc:"product_id,omitempty"`
+	ProjectId                    *Many2One  `xmlrpc:"project_id,omitempty"`
+	RatingIds                    *Relation  `xmlrpc:"rating_ids,omitempty"`
 	ReceiptReminderEmail         *Bool      `xmlrpc:"receipt_reminder_email,omitempty"`
 	ReceiptStatus                *Selection `xmlrpc:"receipt_status,omitempty"`
 	ReminderDateBeforeReceipt    *Int       `xmlrpc:"reminder_date_before_receipt,omitempty"`

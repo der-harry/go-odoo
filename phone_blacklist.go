@@ -19,6 +19,7 @@ type PhoneBlacklist struct {
 	MessageNeedactionCounter *Int      `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds        *Relation `xmlrpc:"message_partner_ids,omitempty"`
 	Number                   *String   `xmlrpc:"number,omitempty"`
+	RatingIds                *Relation `xmlrpc:"rating_ids,omitempty"`
 	WebsiteMessageIds        *Relation `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                *Time     `xmlrpc:"write_date,omitempty"`
 	WriteUid                 *Many2One `xmlrpc:"write_uid,omitempty"`

@@ -41,6 +41,7 @@ type AccountTax struct {
 	NameSearchable               *String    `xmlrpc:"name_searchable,omitempty"`
 	PriceInclude                 *Bool      `xmlrpc:"price_include,omitempty"`
 	PriceIncludeOverride         *Selection `xmlrpc:"price_include_override,omitempty"`
+	RatingIds                    *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RefundRepartitionLineIds     *Relation  `xmlrpc:"refund_repartition_line_ids,omitempty"`
 	RepartitionLineIds           *Relation  `xmlrpc:"repartition_line_ids,omitempty"`
 	RepartitionLinesStr          *String    `xmlrpc:"repartition_lines_str,omitempty"`

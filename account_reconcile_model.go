@@ -49,6 +49,7 @@ type AccountReconcileModel struct {
 	PastMonthsLimit            *Int       `xmlrpc:"past_months_limit,omitempty"`
 	PaymentToleranceParam      *Float     `xmlrpc:"payment_tolerance_param,omitempty"`
 	PaymentToleranceType       *Selection `xmlrpc:"payment_tolerance_type,omitempty"`
+	RatingIds                  *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RuleType                   *Selection `xmlrpc:"rule_type,omitempty"`
 	Sequence                   *Int       `xmlrpc:"sequence,omitempty"`
 	ShowDecimalSeparator       *Bool      `xmlrpc:"show_decimal_separator,omitempty"`

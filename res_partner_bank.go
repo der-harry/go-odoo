@@ -48,6 +48,7 @@ type ResPartnerBank struct {
 	PartnerCustomerRank             *Int       `xmlrpc:"partner_customer_rank,omitempty"`
 	PartnerId                       *Many2One  `xmlrpc:"partner_id,omitempty"`
 	PartnerSupplierRank             *Int       `xmlrpc:"partner_supplier_rank,omitempty"`
+	RatingIds                       *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RelatedMoves                    *Relation  `xmlrpc:"related_moves,omitempty"`
 	SanitizedAccNumber              *String    `xmlrpc:"sanitized_acc_number,omitempty"`
 	Sequence                        *Int       `xmlrpc:"sequence,omitempty"`

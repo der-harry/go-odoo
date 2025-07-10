@@ -34,6 +34,7 @@ type ProductPricelist struct {
 	MessagePartnerIds           *Relation  `xmlrpc:"message_partner_ids,omitempty"`
 	MyActivityDateDeadline      *Time      `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                        *String    `xmlrpc:"name,omitempty"`
+	RatingIds                   *Relation  `xmlrpc:"rating_ids,omitempty"`
 	Sequence                    *Int       `xmlrpc:"sequence,omitempty"`
 	WebsiteMessageIds           *Relation  `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                   *Time      `xmlrpc:"write_date,omitempty"`

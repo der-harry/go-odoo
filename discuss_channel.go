@@ -38,6 +38,7 @@ type DiscussChannel struct {
 	Name                     *String    `xmlrpc:"name,omitempty"`
 	ParentChannelId          *Many2One  `xmlrpc:"parent_channel_id,omitempty"`
 	PinnedMessageIds         *Relation  `xmlrpc:"pinned_message_ids,omitempty"`
+	RatingIds                *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RtcSessionIds            *Relation  `xmlrpc:"rtc_session_ids,omitempty"`
 	SfuChannelUuid           *String    `xmlrpc:"sfu_channel_uuid,omitempty"`
 	SfuServerUrl             *String    `xmlrpc:"sfu_server_url,omitempty"`

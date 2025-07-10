@@ -64,6 +64,7 @@ type CrmTeam struct {
 	OpportunitiesOverdueCount    *Int        `xmlrpc:"opportunities_overdue_count,omitempty"`
 	QuotationsAmount             *Float      `xmlrpc:"quotations_amount,omitempty"`
 	QuotationsCount              *Int        `xmlrpc:"quotations_count,omitempty"`
+	RatingIds                    *Relation   `xmlrpc:"rating_ids,omitempty"`
 	SaleOrderCount               *Int        `xmlrpc:"sale_order_count,omitempty"`
 	SalesToInvoiceCount          *Int        `xmlrpc:"sales_to_invoice_count,omitempty"`
 	Sequence                     *Int        `xmlrpc:"sequence,omitempty"`

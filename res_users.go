@@ -33,7 +33,6 @@ type ResUsers struct {
 	BuyerId                             *Many2One   `xmlrpc:"buyer_id,omitempty"`
 	CalendarDefaultPrivacy              *Selection  `xmlrpc:"calendar_default_privacy,omitempty"`
 	CalendarLastNotifAck                *Time       `xmlrpc:"calendar_last_notif_ack,omitempty"`
-	CanPublish                          *Bool       `xmlrpc:"can_publish,omitempty"`
 	CategoryId                          *Relation   `xmlrpc:"category_id,omitempty"`
 	ChannelIds                          *Relation   `xmlrpc:"channel_ids,omitempty"`
 	ChildIds                            *Relation   `xmlrpc:"child_ids,omitempty"`
@@ -76,8 +75,6 @@ type ResUsers struct {
 	EmailFormatted                      *String     `xmlrpc:"email_formatted,omitempty"`
 	EmailNormalized                     *String     `xmlrpc:"email_normalized,omitempty"`
 	Employee                            *Bool       `xmlrpc:"employee,omitempty"`
-	EventCount                          *Int        `xmlrpc:"event_count,omitempty"`
-	FavoriteLunchProductIds             *Relation   `xmlrpc:"favorite_lunch_product_ids,omitempty"`
 	FiscalCountryCodes                  *String     `xmlrpc:"fiscal_country_codes,omitempty"`
 	Function                            *String     `xmlrpc:"function,omitempty"`
 	GroupsCount                         *Int        `xmlrpc:"groups_count,omitempty"`
@@ -105,11 +102,9 @@ type ResUsers struct {
 	IsCompany                           *Bool       `xmlrpc:"is_company,omitempty"`
 	IsPeppolEdiFormat                   *Bool       `xmlrpc:"is_peppol_edi_format,omitempty"`
 	IsPublic                            *Bool       `xmlrpc:"is_public,omitempty"`
-	IsPublished                         *Bool       `xmlrpc:"is_published,omitempty"`
 	IsUblFormat                         *Bool       `xmlrpc:"is_ubl_format,omitempty"`
 	JournalItemCount                    *Int        `xmlrpc:"journal_item_count,omitempty"`
 	Lang                                *Selection  `xmlrpc:"lang,omitempty"`
-	LastLunchLocationId                 *Many2One   `xmlrpc:"last_lunch_location_id,omitempty"`
 	LogIds                              *Relation   `xmlrpc:"log_ids,omitempty"`
 	Login                               *String     `xmlrpc:"login,omitempty"`
 	LoginDate                           *Time       `xmlrpc:"login_date,omitempty"`
@@ -132,9 +127,6 @@ type ResUsers struct {
 	Name                                *String     `xmlrpc:"name,omitempty"`
 	NewPassword                         *String     `xmlrpc:"new_password,omitempty"`
 	NotificationType                    *Selection  `xmlrpc:"notification_type,omitempty"`
-	OauthAccessToken                    *String     `xmlrpc:"oauth_access_token,omitempty"`
-	OauthProviderId                     *Many2One   `xmlrpc:"oauth_provider_id,omitempty"`
-	OauthUid                            *String     `xmlrpc:"oauth_uid,omitempty"`
 	OdoobotFailed                       *Bool       `xmlrpc:"odoobot_failed,omitempty"`
 	OdoobotState                        *Selection  `xmlrpc:"odoobot_state,omitempty"`
 	OnTimeRate                          *Float      `xmlrpc:"on_time_rate,omitempty"`
@@ -163,6 +155,7 @@ type ResUsers struct {
 	PhoneSanitizedBlacklisted           *Bool       `xmlrpc:"phone_sanitized_blacklisted,omitempty"`
 	PickingWarn                         *Selection  `xmlrpc:"picking_warn,omitempty"`
 	PickingWarnMsg                      *String     `xmlrpc:"picking_warn_msg,omitempty"`
+	ProjectIds                          *Relation   `xmlrpc:"project_ids,omitempty"`
 	PropertyAccountPayableId            *Many2One   `xmlrpc:"property_account_payable_id,omitempty"`
 	PropertyAccountPositionId           *Many2One   `xmlrpc:"property_account_position_id,omitempty"`
 	PropertyAccountReceivableId         *Many2One   `xmlrpc:"property_account_receivable_id,omitempty"`
@@ -179,6 +172,7 @@ type ResUsers struct {
 	PurchaseOrderCount                  *Int        `xmlrpc:"purchase_order_count,omitempty"`
 	PurchaseWarn                        *Selection  `xmlrpc:"purchase_warn,omitempty"`
 	PurchaseWarnMsg                     *String     `xmlrpc:"purchase_warn_msg,omitempty"`
+	RatingIds                           *Relation   `xmlrpc:"rating_ids,omitempty"`
 	ReceiptReminderEmail                *Bool       `xmlrpc:"receipt_reminder_email,omitempty"`
 	Ref                                 *String     `xmlrpc:"ref,omitempty"`
 	RefCompanyIds                       *Relation   `xmlrpc:"ref_company_ids,omitempty"`
@@ -204,8 +198,6 @@ type ResUsers struct {
 	StarredMessageIds                   *Relation   `xmlrpc:"starred_message_ids,omitempty"`
 	State                               *Selection  `xmlrpc:"state,omitempty"`
 	StateId                             *Many2One   `xmlrpc:"state_id,omitempty"`
-	StaticMapUrl                        *String     `xmlrpc:"static_map_url,omitempty"`
-	StaticMapUrlIsValid                 *Bool       `xmlrpc:"static_map_url_is_valid,omitempty"`
 	Street                              *String     `xmlrpc:"street,omitempty"`
 	Street2                             *String     `xmlrpc:"street2,omitempty"`
 	SupplierInvoiceCount                *Int        `xmlrpc:"supplier_invoice_count,omitempty"`
@@ -213,6 +205,8 @@ type ResUsers struct {
 	TargetSalesDone                     *Int        `xmlrpc:"target_sales_done,omitempty"`
 	TargetSalesInvoiced                 *Int        `xmlrpc:"target_sales_invoiced,omitempty"`
 	TargetSalesWon                      *Int        `xmlrpc:"target_sales_won,omitempty"`
+	TaskCount                           *Int        `xmlrpc:"task_count,omitempty"`
+	TaskIds                             *Relation   `xmlrpc:"task_ids,omitempty"`
 	Title                               *Many2One   `xmlrpc:"title,omitempty"`
 	TotalInvoiced                       *Float      `xmlrpc:"total_invoiced,omitempty"`
 	TotpEnabled                         *Bool       `xmlrpc:"totp_enabled,omitempty"`
@@ -231,14 +225,12 @@ type ResUsers struct {
 	VatLabel                            *String     `xmlrpc:"vat_label,omitempty"`
 	ViesValid                           *Bool       `xmlrpc:"vies_valid,omitempty"`
 	ViesVatToCheck                      *String     `xmlrpc:"vies_vat_to_check,omitempty"`
-	VisitorIds                          *Relation   `xmlrpc:"visitor_ids,omitempty"`
 	Website                             *String     `xmlrpc:"website,omitempty"`
-	WebsiteId                           *Many2One   `xmlrpc:"website_id,omitempty"`
 	WebsiteMessageIds                   *Relation   `xmlrpc:"website_message_ids,omitempty"`
-	WebsitePublished                    *Bool       `xmlrpc:"website_published,omitempty"`
-	WebsiteUrl                          *String     `xmlrpc:"website_url,omitempty"`
 	WriteDate                           *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                            *Many2One   `xmlrpc:"write_uid,omitempty"`
+	XJahre                              *Int        `xmlrpc:"x_jahre,omitempty"`
+	XYear                               *Int        `xmlrpc:"x_year,omitempty"`
 	Zip                                 *String     `xmlrpc:"zip,omitempty"`
 }
 

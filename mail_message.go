@@ -42,6 +42,9 @@ type MailMessage struct {
 	PartnerIds                 *Relation  `xmlrpc:"partner_ids,omitempty"`
 	PinnedAt                   *Time      `xmlrpc:"pinned_at,omitempty"`
 	Preview                    *String    `xmlrpc:"preview,omitempty"`
+	RatingId                   *Many2One  `xmlrpc:"rating_id,omitempty"`
+	RatingIds                  *Relation  `xmlrpc:"rating_ids,omitempty"`
+	RatingValue                *Float     `xmlrpc:"rating_value,omitempty"`
 	ReactionIds                *Relation  `xmlrpc:"reaction_ids,omitempty"`
 	RecordAliasDomainId        *Many2One  `xmlrpc:"record_alias_domain_id,omitempty"`
 	RecordCompanyId            *Many2One  `xmlrpc:"record_company_id,omitempty"`

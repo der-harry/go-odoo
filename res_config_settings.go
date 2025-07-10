@@ -27,18 +27,12 @@ type ResConfigSettings struct {
 	AliasDomainId                               *Many2One  `xmlrpc:"alias_domain_id,omitempty"`
 	AnnualInventoryDay                          *Int       `xmlrpc:"annual_inventory_day,omitempty"`
 	AnnualInventoryMonth                        *Selection `xmlrpc:"annual_inventory_month,omitempty"`
-	AuthOauthGoogleClientId                     *String    `xmlrpc:"auth_oauth_google_client_id,omitempty"`
-	AuthOauthGoogleEnabled                      *Bool      `xmlrpc:"auth_oauth_google_enabled,omitempty"`
 	AuthSignupResetPassword                     *Bool      `xmlrpc:"auth_signup_reset_password,omitempty"`
 	AuthSignupTemplateUserId                    *Many2One  `xmlrpc:"auth_signup_template_user_id,omitempty"`
 	AuthSignupUninvited                         *Selection `xmlrpc:"auth_signup_uninvited,omitempty"`
 	AutomaticInvoice                            *Bool      `xmlrpc:"automatic_invoice,omitempty"`
 	AutopostBills                               *Bool      `xmlrpc:"autopost_bills,omitempty"`
-	BarcodeNomenclatureId                       *Many2One  `xmlrpc:"barcode_nomenclature_id,omitempty"`
 	BarcodeSeparator                            *String    `xmlrpc:"barcode_separator,omitempty"`
-	CdnActivated                                *Bool      `xmlrpc:"cdn_activated,omitempty"`
-	CdnFilters                                  *String    `xmlrpc:"cdn_filters,omitempty"`
-	CdnUrl                                      *String    `xmlrpc:"cdn_url,omitempty"`
 	ChartTemplate                               *Selection `xmlrpc:"chart_template,omitempty"`
 	CheckAccountAuditTrail                      *Bool      `xmlrpc:"check_account_audit_trail,omitempty"`
 	CompanyCount                                *Int       `xmlrpc:"company_count,omitempty"`
@@ -46,8 +40,6 @@ type ResConfigSettings struct {
 	CompanyCurrencyId                           *Many2One  `xmlrpc:"company_currency_id,omitempty"`
 	CompanyId                                   *Many2One  `xmlrpc:"company_id,omitempty"`
 	CompanyInformations                         *String    `xmlrpc:"company_informations,omitempty"`
-	CompanyLunchMinimumThreshold                *Float     `xmlrpc:"company_lunch_minimum_threshold,omitempty"`
-	CompanyLunchNotifyMessage                   *String    `xmlrpc:"company_lunch_notify_message,omitempty"`
 	CompanyName                                 *String    `xmlrpc:"company_name,omitempty"`
 	CompanySoTemplateId                         *Many2One  `xmlrpc:"company_so_template_id,omitempty"`
 	CountryCode                                 *String    `xmlrpc:"country_code,omitempty"`
@@ -75,15 +67,9 @@ type ResConfigSettings struct {
 	ExternalEmailServerDefault                  *Bool      `xmlrpc:"external_email_server_default,omitempty"`
 	ExternalReportLayoutId                      *Many2One  `xmlrpc:"external_report_layout_id,omitempty"`
 	FailCounter                                 *Int       `xmlrpc:"fail_counter,omitempty"`
-	Favicon                                     *String    `xmlrpc:"favicon,omitempty"`
-	FirstProviderLabel                          *String    `xmlrpc:"first_provider_label,omitempty"`
 	GenerateNumberForNewCustomers               *Bool      `xmlrpc:"generate_number_for_new_customers,omitempty"`
-	GoogleAnalyticsKey                          *String    `xmlrpc:"google_analytics_key,omitempty"`
 	GoogleGmailClientIdentifier                 *String    `xmlrpc:"google_gmail_client_identifier,omitempty"`
 	GoogleGmailClientSecret                     *String    `xmlrpc:"google_gmail_client_secret,omitempty"`
-	GoogleMapsStaticApiKey                      *String    `xmlrpc:"google_maps_static_api_key,omitempty"`
-	GoogleMapsStaticApiSecret                   *String    `xmlrpc:"google_maps_static_api_secret,omitempty"`
-	GoogleSearchConsole                         *String    `xmlrpc:"google_search_console,omitempty"`
 	GoogleTranslateApiKey                       *String    `xmlrpc:"google_translate_api_key,omitempty"`
 	GroupAnalyticAccounting                     *Bool      `xmlrpc:"group_analytic_accounting,omitempty"`
 	GroupAutoDoneSetting                        *Bool      `xmlrpc:"group_auto_done_setting,omitempty"`
@@ -92,10 +78,14 @@ type ResConfigSettings struct {
 	GroupLotOnDeliverySlip                      *Bool      `xmlrpc:"group_lot_on_delivery_slip,omitempty"`
 	GroupLotOnInvoice                           *Bool      `xmlrpc:"group_lot_on_invoice,omitempty"`
 	GroupMultiCurrency                          *Bool      `xmlrpc:"group_multi_currency,omitempty"`
-	GroupMultiWebsite                           *Bool      `xmlrpc:"group_multi_website,omitempty"`
 	GroupProductPricelist                       *Bool      `xmlrpc:"group_product_pricelist,omitempty"`
 	GroupProductVariant                         *Bool      `xmlrpc:"group_product_variant,omitempty"`
 	GroupProformaSales                          *Bool      `xmlrpc:"group_proforma_sales,omitempty"`
+	GroupProjectMilestone                       *Bool      `xmlrpc:"group_project_milestone,omitempty"`
+	GroupProjectRating                          *Bool      `xmlrpc:"group_project_rating,omitempty"`
+	GroupProjectRecurringTasks                  *Bool      `xmlrpc:"group_project_recurring_tasks,omitempty"`
+	GroupProjectStages                          *Bool      `xmlrpc:"group_project_stages,omitempty"`
+	GroupProjectTaskDependencies                *Bool      `xmlrpc:"group_project_task_dependencies,omitempty"`
 	GroupSaleDeliveryAddress                    *Bool      `xmlrpc:"group_sale_delivery_address,omitempty"`
 	GroupSaleOrderTemplate                      *Bool      `xmlrpc:"group_sale_order_template,omitempty"`
 	GroupSendReminder                           *Bool      `xmlrpc:"group_send_reminder,omitempty"`
@@ -120,10 +110,6 @@ type ResConfigSettings struct {
 	GroupWarningStock                           *Bool      `xmlrpc:"group_warning_stock,omitempty"`
 	HasAccountingEntries                        *Bool      `xmlrpc:"has_accounting_entries,omitempty"`
 	HasChartOfAccounts                          *Bool      `xmlrpc:"has_chart_of_accounts,omitempty"`
-	HasDefaultShareImage                        *Bool      `xmlrpc:"has_default_share_image,omitempty"`
-	HasGoogleAnalytics                          *Bool      `xmlrpc:"has_google_analytics,omitempty"`
-	HasGoogleSearchConsole                      *Bool      `xmlrpc:"has_google_search_console,omitempty"`
-	HasPlausibleSharedKey                       *Bool      `xmlrpc:"has_plausible_shared_key,omitempty"`
 	Id                                          *Int       `xmlrpc:"id,omitempty"`
 	IncomeCurrencyExchangeAccountId             *Many2One  `xmlrpc:"income_currency_exchange_account_id,omitempty"`
 	IncotermId                                  *Many2One  `xmlrpc:"incoterm_id,omitempty"`
@@ -134,9 +120,7 @@ type ResConfigSettings struct {
 	IsInstalledSale                             *Bool      `xmlrpc:"is_installed_sale,omitempty"`
 	IsMembershipMulti                           *Bool      `xmlrpc:"is_membership_multi,omitempty"`
 	IsRootCompany                               *Bool      `xmlrpc:"is_root_company,omitempty"`
-	IsStripeSupportedCountry                    *Bool      `xmlrpc:"is_stripe_supported_country,omitempty"`
 	LanguageCount                               *Int       `xmlrpc:"language_count,omitempty"`
-	LanguageIds                                 *Relation  `xmlrpc:"language_ids,omitempty"`
 	LeadEnrichAuto                              *Selection `xmlrpc:"lead_enrich_auto,omitempty"`
 	LeadMiningInPipeline                        *Bool      `xmlrpc:"lead_mining_in_pipeline,omitempty"`
 	LockConfirmedPo                             *Bool      `xmlrpc:"lock_confirmed_po,omitempty"`
@@ -176,19 +160,16 @@ type ResConfigSettings struct {
 	ModuleDeliveryStarshipit                    *Bool      `xmlrpc:"module_delivery_starshipit,omitempty"`
 	ModuleDeliveryUps                           *Bool      `xmlrpc:"module_delivery_ups,omitempty"`
 	ModuleDeliveryUsps                          *Bool      `xmlrpc:"module_delivery_usps,omitempty"`
-	ModuleEventBooth                            *Bool      `xmlrpc:"module_event_booth,omitempty"`
-	ModuleEventSale                             *Bool      `xmlrpc:"module_event_sale,omitempty"`
 	ModuleGoogleCalendar                        *Bool      `xmlrpc:"module_google_calendar,omitempty"`
 	ModuleGoogleGmail                           *Bool      `xmlrpc:"module_google_gmail,omitempty"`
 	ModuleGoogleRecaptcha                       *Bool      `xmlrpc:"module_google_recaptcha,omitempty"`
+	ModuleHrTimesheet                           *Bool      `xmlrpc:"module_hr_timesheet,omitempty"`
 	ModuleL10NEuOss                             *Bool      `xmlrpc:"module_l10n_eu_oss,omitempty"`
 	ModuleLoyalty                               *Bool      `xmlrpc:"module_loyalty,omitempty"`
 	ModuleMailPlugin                            *Bool      `xmlrpc:"module_mail_plugin,omitempty"`
-	ModuleMarketingAutomation                   *Bool      `xmlrpc:"module_marketing_automation,omitempty"`
 	ModuleMicrosoftCalendar                     *Bool      `xmlrpc:"module_microsoft_calendar,omitempty"`
 	ModuleMicrosoftOutlook                      *Bool      `xmlrpc:"module_microsoft_outlook,omitempty"`
 	ModulePartnerAutocomplete                   *Bool      `xmlrpc:"module_partner_autocomplete,omitempty"`
-	ModulePosEvent                              *Bool      `xmlrpc:"module_pos_event,omitempty"`
 	ModuleProductEmailTemplate                  *Bool      `xmlrpc:"module_product_email_template,omitempty"`
 	ModuleProductExpiry                         *Bool      `xmlrpc:"module_product_expiry,omitempty"`
 	ModuleProductImages                         *Bool      `xmlrpc:"module_product_images,omitempty"`
@@ -216,17 +197,8 @@ type ResConfigSettings struct {
 	ModuleWebUnsplash                           *Bool      `xmlrpc:"module_web_unsplash,omitempty"`
 	ModuleWebsiteCfTurnstile                    *Bool      `xmlrpc:"module_website_cf_turnstile,omitempty"`
 	ModuleWebsiteCrmIapReveal                   *Bool      `xmlrpc:"module_website_crm_iap_reveal,omitempty"`
-	ModuleWebsiteEventExhibitor                 *Bool      `xmlrpc:"module_website_event_exhibitor,omitempty"`
-	ModuleWebsiteEventMeet                      *Bool      `xmlrpc:"module_website_event_meet,omitempty"`
-	ModuleWebsiteEventSale                      *Bool      `xmlrpc:"module_website_event_sale,omitempty"`
-	ModuleWebsiteEventTrack                     *Bool      `xmlrpc:"module_website_event_track,omitempty"`
-	ModuleWebsiteEventTrackLive                 *Bool      `xmlrpc:"module_website_event_track_live,omitempty"`
-	ModuleWebsiteEventTrackQuiz                 *Bool      `xmlrpc:"module_website_event_track_quiz,omitempty"`
-	ModuleWebsiteLivechat                       *Bool      `xmlrpc:"module_website_livechat,omitempty"`
 	PartnerAutocompleteInsufficientCredit       *Bool      `xmlrpc:"partner_autocomplete_insufficient_credit,omitempty"`
 	PayInvoicesOnline                           *Bool      `xmlrpc:"pay_invoices_online,omitempty"`
-	PlausibleSharedKey                          *String    `xmlrpc:"plausible_shared_key,omitempty"`
-	PlausibleSite                               *String    `xmlrpc:"plausible_site,omitempty"`
 	PoDoubleValidation                          *Selection `xmlrpc:"po_double_validation,omitempty"`
 	PoDoubleValidationAmount                    *Float     `xmlrpc:"po_double_validation_amount,omitempty"`
 	PoLead                                      *Float     `xmlrpc:"po_lead,omitempty"`
@@ -246,29 +218,22 @@ type ResConfigSettings struct {
 	ProductVolumeVolumeInCubicFeet              *Selection `xmlrpc:"product_volume_volume_in_cubic_feet,omitempty"`
 	ProductWeightInLbs                          *Selection `xmlrpc:"product_weight_in_lbs,omitempty"`
 	ProfilingEnabledUntil                       *Time      `xmlrpc:"profiling_enabled_until,omitempty"`
-	ProvidersState                              *Selection `xmlrpc:"providers_state,omitempty"`
 	PurchaseTaxId                               *Many2One  `xmlrpc:"purchase_tax_id,omitempty"`
 	QrCode                                      *Bool      `xmlrpc:"qr_code,omitempty"`
 	QuickEditMode                               *Selection `xmlrpc:"quick_edit_mode,omitempty"`
 	QuotationValidityDays                       *Int       `xmlrpc:"quotation_validity_days,omitempty"`
-	RecaptchaMinScore                           *Float     `xmlrpc:"recaptcha_min_score,omitempty"`
-	RecaptchaPrivateKey                         *String    `xmlrpc:"recaptcha_private_key,omitempty"`
-	RecaptchaPublicKey                          *String    `xmlrpc:"recaptcha_public_key,omitempty"`
 	ReportFooter                                *String    `xmlrpc:"report_footer,omitempty"`
 	RestrictTemplateRendering                   *Bool      `xmlrpc:"restrict_template_rendering,omitempty"`
 	SaleTaxId                                   *Many2One  `xmlrpc:"sale_tax_id,omitempty"`
 	SecurityLead                                *Float     `xmlrpc:"security_lead,omitempty"`
 	SequenceSize                                *Int       `xmlrpc:"sequence_size,omitempty"`
-	ServerUriGoogle                             *String    `xmlrpc:"server_uri_google,omitempty"`
 	SfuServerKey                                *String    `xmlrpc:"sfu_server_key,omitempty"`
 	SfuServerUrl                                *String    `xmlrpc:"sfu_server_url,omitempty"`
-	SharedUserAccount                           *Bool      `xmlrpc:"shared_user_account,omitempty"`
 	ShowEffect                                  *Bool      `xmlrpc:"show_effect,omitempty"`
 	SnailmailColor                              *Bool      `xmlrpc:"snailmail_color,omitempty"`
 	SnailmailCover                              *Bool      `xmlrpc:"snailmail_cover,omitempty"`
 	SnailmailCoverReadonly                      *Bool      `xmlrpc:"snailmail_cover_readonly,omitempty"`
 	SnailmailDuplex                             *Bool      `xmlrpc:"snailmail_duplex,omitempty"`
-	SocialDefaultImage                          *String    `xmlrpc:"social_default_image,omitempty"`
 	StartingNumber                              *Int       `xmlrpc:"starting_number,omitempty"`
 	StockMoveEmailValidation                    *Bool      `xmlrpc:"stock_move_email_validation,omitempty"`
 	StockMoveSmsValidation                      *Bool      `xmlrpc:"stock_move_sms_validation,omitempty"`
@@ -286,8 +251,6 @@ type ResConfigSettings struct {
 	TwilioAccountToken                          *String    `xmlrpc:"twilio_account_token,omitempty"`
 	UnsplashAccessKey                           *String    `xmlrpc:"unsplash_access_key,omitempty"`
 	UnsplashAppId                               *String    `xmlrpc:"unsplash_app_id,omitempty"`
-	UseEventBarcode                             *Bool      `xmlrpc:"use_event_barcode,omitempty"`
-	UseGoogleMapsStaticApi                      *Bool      `xmlrpc:"use_google_maps_static_api,omitempty"`
 	UseInvoiceTerms                             *Bool      `xmlrpc:"use_invoice_terms,omitempty"`
 	UsePoLead                                   *Bool      `xmlrpc:"use_po_lead,omitempty"`
 	UseSecurityLead                             *Bool      `xmlrpc:"use_security_lead,omitempty"`
@@ -295,17 +258,6 @@ type ResConfigSettings struct {
 	UserDefaultRights                           *Bool      `xmlrpc:"user_default_rights,omitempty"`
 	VatCheckVies                                *Bool      `xmlrpc:"vat_check_vies,omitempty"`
 	WebAppName                                  *String    `xmlrpc:"web_app_name,omitempty"`
-	WebsiteBlockThirdPartyDomains               *Bool      `xmlrpc:"website_block_third_party_domains,omitempty"`
-	WebsiteCompanyId                            *Many2One  `xmlrpc:"website_company_id,omitempty"`
-	WebsiteCookiesBar                           *Bool      `xmlrpc:"website_cookies_bar,omitempty"`
-	WebsiteDefaultLangCode                      *String    `xmlrpc:"website_default_lang_code,omitempty"`
-	WebsiteDefaultLangId                        *Many2One  `xmlrpc:"website_default_lang_id,omitempty"`
-	WebsiteDomain                               *String    `xmlrpc:"website_domain,omitempty"`
-	WebsiteHomepageUrl                          *String    `xmlrpc:"website_homepage_url,omitempty"`
-	WebsiteId                                   *Many2One  `xmlrpc:"website_id,omitempty"`
-	WebsiteLanguageCount                        *Int       `xmlrpc:"website_language_count,omitempty"`
-	WebsiteLogo                                 *String    `xmlrpc:"website_logo,omitempty"`
-	WebsiteName                                 *String    `xmlrpc:"website_name,omitempty"`
 	WriteDate                                   *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                                    *Many2One  `xmlrpc:"write_uid,omitempty"`
 }

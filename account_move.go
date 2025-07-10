@@ -135,6 +135,7 @@ type AccountMove struct {
 	QuickEditMode                         *Bool       `xmlrpc:"quick_edit_mode,omitempty"`
 	QuickEditTotalAmount                  *Float      `xmlrpc:"quick_edit_total_amount,omitempty"`
 	QuickEncodingVals                     interface{} `xmlrpc:"quick_encoding_vals,omitempty"`
+	RatingIds                             *Relation   `xmlrpc:"rating_ids,omitempty"`
 	Ref                                   *String     `xmlrpc:"ref,omitempty"`
 	RestrictModeHashTable                 *Bool       `xmlrpc:"restrict_mode_hash_table,omitempty"`
 	ReversalMoveIds                       *Relation   `xmlrpc:"reversal_move_ids,omitempty"`

@@ -38,6 +38,7 @@ type ProductCategory struct {
 	PropertyStockValuationAccountId             *Many2One   `xmlrpc:"property_stock_valuation_account_id,omitempty"`
 	PropertyValuation                           *Selection  `xmlrpc:"property_valuation,omitempty"`
 	PutawayRuleIds                              *Relation   `xmlrpc:"putaway_rule_ids,omitempty"`
+	RatingIds                                   *Relation   `xmlrpc:"rating_ids,omitempty"`
 	RemovalStrategyId                           *Many2One   `xmlrpc:"removal_strategy_id,omitempty"`
 	RouteIds                                    *Relation   `xmlrpc:"route_ids,omitempty"`
 	TotalRouteIds                               *Relation   `xmlrpc:"total_route_ids,omitempty"`

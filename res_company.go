@@ -96,8 +96,6 @@ type ResCompany struct {
 	LayoutBackgroundImage                       *String    `xmlrpc:"layout_background_image,omitempty"`
 	Logo                                        *String    `xmlrpc:"logo,omitempty"`
 	LogoWeb                                     *String    `xmlrpc:"logo_web,omitempty"`
-	LunchMinimumThreshold                       *Float     `xmlrpc:"lunch_minimum_threshold,omitempty"`
-	LunchNotifyMessage                          *String    `xmlrpc:"lunch_notify_message,omitempty"`
 	MessageAttachmentCount                      *Int       `xmlrpc:"message_attachment_count,omitempty"`
 	MessageFollowerIds                          *Relation  `xmlrpc:"message_follower_ids,omitempty"`
 	MessageHasError                             *Bool      `xmlrpc:"message_has_error,omitempty"`
@@ -135,6 +133,7 @@ type ResCompany struct {
 	QrCode                                      *Bool      `xmlrpc:"qr_code,omitempty"`
 	QuickEditMode                               *Selection `xmlrpc:"quick_edit_mode,omitempty"`
 	QuotationValidityDays                       *Int       `xmlrpc:"quotation_validity_days,omitempty"`
+	RatingIds                                   *Relation  `xmlrpc:"rating_ids,omitempty"`
 	ReportFooter                                *String    `xmlrpc:"report_footer,omitempty"`
 	ReportHeader                                *String    `xmlrpc:"report_header,omitempty"`
 	ResourceCalendarId                          *Many2One  `xmlrpc:"resource_calendar_id,omitempty"`
@@ -151,13 +150,6 @@ type ResCompany struct {
 	SnailmailColor                              *Bool      `xmlrpc:"snailmail_color,omitempty"`
 	SnailmailCover                              *Bool      `xmlrpc:"snailmail_cover,omitempty"`
 	SnailmailDuplex                             *Bool      `xmlrpc:"snailmail_duplex,omitempty"`
-	SocialFacebook                              *String    `xmlrpc:"social_facebook,omitempty"`
-	SocialGithub                                *String    `xmlrpc:"social_github,omitempty"`
-	SocialInstagram                             *String    `xmlrpc:"social_instagram,omitempty"`
-	SocialLinkedin                              *String    `xmlrpc:"social_linkedin,omitempty"`
-	SocialTiktok                                *String    `xmlrpc:"social_tiktok,omitempty"`
-	SocialTwitter                               *String    `xmlrpc:"social_twitter,omitempty"`
-	SocialYoutube                               *String    `xmlrpc:"social_youtube,omitempty"`
 	StateId                                     *Many2One  `xmlrpc:"state_id,omitempty"`
 	StockMailConfirmationTemplateId             *Many2One  `xmlrpc:"stock_mail_confirmation_template_id,omitempty"`
 	StockMoveEmailValidation                    *Bool      `xmlrpc:"stock_move_email_validation,omitempty"`
@@ -183,7 +175,6 @@ type ResCompany struct {
 	Vat                                         *String    `xmlrpc:"vat,omitempty"`
 	VatCheckVies                                *Bool      `xmlrpc:"vat_check_vies,omitempty"`
 	Website                                     *String    `xmlrpc:"website,omitempty"`
-	WebsiteId                                   *Many2One  `xmlrpc:"website_id,omitempty"`
 	WebsiteMessageIds                           *Relation  `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                                   *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                                    *Many2One  `xmlrpc:"write_uid,omitempty"`

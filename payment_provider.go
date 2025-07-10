@@ -40,7 +40,6 @@ type PaymentProvider struct {
 	SupportRefund             *Selection `xmlrpc:"support_refund,omitempty"`
 	SupportTokenization       *Bool      `xmlrpc:"support_tokenization,omitempty"`
 	TokenInlineFormViewId     *Many2One  `xmlrpc:"token_inline_form_view_id,omitempty"`
-	WebsiteId                 *Many2One  `xmlrpc:"website_id,omitempty"`
 	WriteDate                 *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                  *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
