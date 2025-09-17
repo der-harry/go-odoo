@@ -46,6 +46,7 @@ type LunchSupplier struct {
 	OrderDeadlinePassed         *Bool      `xmlrpc:"order_deadline_passed,omitempty"`
 	PartnerId                   *Many2One  `xmlrpc:"partner_id,omitempty"`
 	Phone                       *String    `xmlrpc:"phone,omitempty"`
+	RatingIds                   *Relation  `xmlrpc:"rating_ids,omitempty"`
 	RecurrencyEndDate           *Time      `xmlrpc:"recurrency_end_date,omitempty"`
 	ResponsibleId               *Many2One  `xmlrpc:"responsible_id,omitempty"`
 	Sat                         *Bool      `xmlrpc:"sat,omitempty"`

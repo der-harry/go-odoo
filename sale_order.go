@@ -22,6 +22,7 @@ type SaleOrder struct {
 	AmountTotal                  *Float      `xmlrpc:"amount_total,omitempty"`
 	AmountUndiscounted           *Float      `xmlrpc:"amount_undiscounted,omitempty"`
 	AmountUntaxed                *Float      `xmlrpc:"amount_untaxed,omitempty"`
+	AttendeeCount                *Int        `xmlrpc:"attendee_count,omitempty"`
 	AuthorizedTransactionIds     *Relation   `xmlrpc:"authorized_transaction_ids,omitempty"`
 	AvailableProductDocumentIds  *Relation   `xmlrpc:"available_product_document_ids,omitempty"`
 	CampaignId                   *Many2One   `xmlrpc:"campaign_id,omitempty"`
@@ -45,6 +46,9 @@ type SaleOrder struct {
 	EffectiveDate                *Time       `xmlrpc:"effective_date,omitempty"`
 	ExpectedDate                 *Time       `xmlrpc:"expected_date,omitempty"`
 	FiscalPositionId             *Many2One   `xmlrpc:"fiscal_position_id,omitempty"`
+	Grid                         *String     `xmlrpc:"grid,omitempty"`
+	GridProductTmplId            *Many2One   `xmlrpc:"grid_product_tmpl_id,omitempty"`
+	GridUpdate                   *Bool       `xmlrpc:"grid_update,omitempty"`
 	HasActivePricelist           *Bool       `xmlrpc:"has_active_pricelist,omitempty"`
 	HasArchivedProducts          *Bool       `xmlrpc:"has_archived_products,omitempty"`
 	HasMessage                   *Bool       `xmlrpc:"has_message,omitempty"`
@@ -60,6 +64,8 @@ type SaleOrder struct {
 	JournalId                    *Many2One   `xmlrpc:"journal_id,omitempty"`
 	JsonPopover                  *String     `xmlrpc:"json_popover,omitempty"`
 	Locked                       *Bool       `xmlrpc:"locked,omitempty"`
+	Margin                       *Float      `xmlrpc:"margin,omitempty"`
+	MarginPercent                *Float      `xmlrpc:"margin_percent,omitempty"`
 	MediumId                     *Many2One   `xmlrpc:"medium_id,omitempty"`
 	MessageAttachmentCount       *Int        `xmlrpc:"message_attachment_count,omitempty"`
 	MessageFollowerIds           *Relation   `xmlrpc:"message_follower_ids,omitempty"`
@@ -72,6 +78,8 @@ type SaleOrder struct {
 	MessageNeedactionCounter     *Int        `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds            *Relation   `xmlrpc:"message_partner_ids,omitempty"`
 	MilestoneCount               *Int        `xmlrpc:"milestone_count,omitempty"`
+	MrpProductionCount           *Int        `xmlrpc:"mrp_production_count,omitempty"`
+	MrpProductionIds             *Relation   `xmlrpc:"mrp_production_ids,omitempty"`
 	MyActivityDateDeadline       *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                         *String     `xmlrpc:"name,omitempty"`
 	Note                         *String     `xmlrpc:"note,omitempty"`
@@ -97,6 +105,7 @@ type SaleOrder struct {
 	QuotationDocumentIds         *Relation   `xmlrpc:"quotation_document_ids,omitempty"`
 	RatingIds                    *Relation   `xmlrpc:"rating_ids,omitempty"`
 	Reference                    *String     `xmlrpc:"reference,omitempty"`
+	ReportGrids                  *Bool       `xmlrpc:"report_grids,omitempty"`
 	RequirePayment               *Bool       `xmlrpc:"require_payment,omitempty"`
 	RequireSignature             *Bool       `xmlrpc:"require_signature,omitempty"`
 	SaleOrderOptionIds           *Relation   `xmlrpc:"sale_order_option_ids,omitempty"`

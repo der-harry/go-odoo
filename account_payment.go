@@ -33,6 +33,7 @@ type AccountPayment struct {
 	HasMessage                      *Bool      `xmlrpc:"has_message,omitempty"`
 	Id                              *Int       `xmlrpc:"id,omitempty"`
 	InvoiceIds                      *Relation  `xmlrpc:"invoice_ids,omitempty"`
+	IsDonation                      *Bool      `xmlrpc:"is_donation,omitempty"`
 	IsMatched                       *Bool      `xmlrpc:"is_matched,omitempty"`
 	IsReconciled                    *Bool      `xmlrpc:"is_reconciled,omitempty"`
 	IsSent                          *Bool      `xmlrpc:"is_sent,omitempty"`

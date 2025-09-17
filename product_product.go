@@ -19,6 +19,9 @@ type ProductProduct struct {
 	AttributeLineIds                       *Relation   `xmlrpc:"attribute_line_ids,omitempty"`
 	AvgCost                                *Float      `xmlrpc:"avg_cost,omitempty"`
 	Barcode                                *String     `xmlrpc:"barcode,omitempty"`
+	BomCount                               *Int        `xmlrpc:"bom_count,omitempty"`
+	BomIds                                 *Relation   `xmlrpc:"bom_ids,omitempty"`
+	BomLineIds                             *Relation   `xmlrpc:"bom_line_ids,omitempty"`
 	CanImage1024BeZoomed                   *Bool       `xmlrpc:"can_image_1024_be_zoomed,omitempty"`
 	CanImageVariant1024BeZoomed            *Bool       `xmlrpc:"can_image_variant_1024_be_zoomed,omitempty"`
 	CategId                                *Many2One   `xmlrpc:"categ_id,omitempty"`
@@ -41,6 +44,7 @@ type ProductProduct struct {
 	DescriptionPurchase                    *String     `xmlrpc:"description_purchase,omitempty"`
 	DescriptionSale                        *String     `xmlrpc:"description_sale,omitempty"`
 	DisplayName                            *String     `xmlrpc:"display_name,omitempty"`
+	EventTicketIds                         *Relation   `xmlrpc:"event_ticket_ids,omitempty"`
 	ExpensePolicy                          *Selection  `xmlrpc:"expense_policy,omitempty"`
 	FiscalCountryCodes                     *String     `xmlrpc:"fiscal_country_codes,omitempty"`
 	FreeQty                                *Float      `xmlrpc:"free_qty,omitempty"`
@@ -62,6 +66,7 @@ type ProductProduct struct {
 	InvoicePolicy                          *Selection  `xmlrpc:"invoice_policy,omitempty"`
 	IsFavorite                             *Bool       `xmlrpc:"is_favorite,omitempty"`
 	IsInPurchaseOrder                      *Bool       `xmlrpc:"is_in_purchase_order,omitempty"`
+	IsKits                                 *Bool       `xmlrpc:"is_kits,omitempty"`
 	IsProductVariant                       *Bool       `xmlrpc:"is_product_variant,omitempty"`
 	IsStorable                             *Bool       `xmlrpc:"is_storable,omitempty"`
 	ListPrice                              *Float      `xmlrpc:"list_price,omitempty"`
@@ -79,6 +84,7 @@ type ProductProduct struct {
 	MessageNeedaction                      *Bool       `xmlrpc:"message_needaction,omitempty"`
 	MessageNeedactionCounter               *Int        `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds                      *Relation   `xmlrpc:"message_partner_ids,omitempty"`
+	MrpProductQty                          *Float      `xmlrpc:"mrp_product_qty,omitempty"`
 	MyActivityDateDeadline                 *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                                   *String     `xmlrpc:"name,omitempty"`
 	NbrMovesIn                             *Int        `xmlrpc:"nbr_moves_in,omitempty"`
@@ -91,6 +97,9 @@ type ProductProduct struct {
 	PartnerRef                             *String     `xmlrpc:"partner_ref,omitempty"`
 	PriceExtra                             *Float      `xmlrpc:"price_extra,omitempty"`
 	PricelistItemCount                     *Int        `xmlrpc:"pricelist_item_count,omitempty"`
+	ProductAddMode                         *Selection  `xmlrpc:"product_add_mode,omitempty"`
+	ProductCatalogProductIsInBom           *Bool       `xmlrpc:"product_catalog_product_is_in_bom,omitempty"`
+	ProductCatalogProductIsInMo            *Bool       `xmlrpc:"product_catalog_product_is_in_mo,omitempty"`
 	ProductCatalogProductIsInSaleOrder     *Bool       `xmlrpc:"product_catalog_product_is_in_sale_order,omitempty"`
 	ProductDocumentCount                   *Int        `xmlrpc:"product_document_count,omitempty"`
 	ProductDocumentIds                     *Relation   `xmlrpc:"product_document_ids,omitempty"`
@@ -153,10 +162,12 @@ type ProductProduct struct {
 	UomId                                  *Many2One   `xmlrpc:"uom_id,omitempty"`
 	UomName                                *String     `xmlrpc:"uom_name,omitempty"`
 	UomPoId                                *Many2One   `xmlrpc:"uom_po_id,omitempty"`
+	UsedInBomCount                         *Int        `xmlrpc:"used_in_bom_count,omitempty"`
 	ValidEan                               *Bool       `xmlrpc:"valid_ean,omitempty"`
 	ValidProductTemplateAttributeLineIds   *Relation   `xmlrpc:"valid_product_template_attribute_line_ids,omitempty"`
 	Valuation                              *Selection  `xmlrpc:"valuation,omitempty"`
 	ValueSvl                               *Float      `xmlrpc:"value_svl,omitempty"`
+	VariantBomIds                          *Relation   `xmlrpc:"variant_bom_ids,omitempty"`
 	VariantDescriptionSale                 *String     `xmlrpc:"variant_description_sale,omitempty"`
 	VariantSellerIds                       *Relation   `xmlrpc:"variant_seller_ids,omitempty"`
 	VirtualAvailable                       *Float      `xmlrpc:"virtual_available,omitempty"`

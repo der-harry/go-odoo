@@ -38,6 +38,7 @@ type ProjectProject struct {
 	AllowTaskDependencies        *Bool       `xmlrpc:"allow_task_dependencies,omitempty"`
 	AnalyticAccountBalance       *Float      `xmlrpc:"analytic_account_balance,omitempty"`
 	AutoAccountId                *Many2One   `xmlrpc:"auto_account_id,omitempty"`
+	BomCount                     *Int        `xmlrpc:"bom_count,omitempty"`
 	CanMarkMilestoneAsDone       *Bool       `xmlrpc:"can_mark_milestone_as_done,omitempty"`
 	ClosedTaskCount              *Int        `xmlrpc:"closed_task_count,omitempty"`
 	CollaboratorCount            *Int        `xmlrpc:"collaborator_count,omitempty"`
@@ -87,6 +88,7 @@ type ProjectProject struct {
 	PartnerId                    *Many2One   `xmlrpc:"partner_id,omitempty"`
 	PrivacyVisibility            *Selection  `xmlrpc:"privacy_visibility,omitempty"`
 	PrivacyVisibilityWarning     *String     `xmlrpc:"privacy_visibility_warning,omitempty"`
+	ProductionCount              *Int        `xmlrpc:"production_count,omitempty"`
 	PurchaseOrdersCount          *Int        `xmlrpc:"purchase_orders_count,omitempty"`
 	RatingActive                 *Bool       `xmlrpc:"rating_active,omitempty"`
 	RatingAvg                    *Float      `xmlrpc:"rating_avg,omitempty"`

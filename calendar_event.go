@@ -75,6 +75,7 @@ type CalendarEvent struct {
 	TentativeCount           *Int       `xmlrpc:"tentative_count,omitempty"`
 	Thu                      *Bool      `xmlrpc:"thu,omitempty"`
 	Tue                      *Bool      `xmlrpc:"tue,omitempty"`
+	UnavailablePartnerIds    *Relation  `xmlrpc:"unavailable_partner_ids,omitempty"`
 	Until                    *Time      `xmlrpc:"until,omitempty"`
 	UserCanEdit              *Bool      `xmlrpc:"user_can_edit,omitempty"`
 	UserId                   *Many2One  `xmlrpc:"user_id,omitempty"`

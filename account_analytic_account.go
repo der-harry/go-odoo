@@ -4,6 +4,8 @@ package odoo
 type AccountAnalyticAccount struct {
 	Active                   *Bool     `xmlrpc:"active,omitempty"`
 	Balance                  *Float    `xmlrpc:"balance,omitempty"`
+	BomCount                 *Int      `xmlrpc:"bom_count,omitempty"`
+	BomIds                   *Relation `xmlrpc:"bom_ids,omitempty"`
 	Code                     *String   `xmlrpc:"code,omitempty"`
 	Color                    *Int      `xmlrpc:"color,omitempty"`
 	CompanyId                *Many2One `xmlrpc:"company_id,omitempty"`
@@ -30,6 +32,8 @@ type AccountAnalyticAccount struct {
 	Name                     *String   `xmlrpc:"name,omitempty"`
 	PartnerId                *Many2One `xmlrpc:"partner_id,omitempty"`
 	PlanId                   *Many2One `xmlrpc:"plan_id,omitempty"`
+	ProductionCount          *Int      `xmlrpc:"production_count,omitempty"`
+	ProductionIds            *Relation `xmlrpc:"production_ids,omitempty"`
 	ProjectCount             *Int      `xmlrpc:"project_count,omitempty"`
 	ProjectIds               *Relation `xmlrpc:"project_ids,omitempty"`
 	PurchaseOrderCount       *Int      `xmlrpc:"purchase_order_count,omitempty"`
@@ -37,6 +41,8 @@ type AccountAnalyticAccount struct {
 	RootPlanId               *Many2One `xmlrpc:"root_plan_id,omitempty"`
 	VendorBillCount          *Int      `xmlrpc:"vendor_bill_count,omitempty"`
 	WebsiteMessageIds        *Relation `xmlrpc:"website_message_ids,omitempty"`
+	WorkcenterIds            *Relation `xmlrpc:"workcenter_ids,omitempty"`
+	WorkorderCount           *Int      `xmlrpc:"workorder_count,omitempty"`
 	WriteDate                *Time     `xmlrpc:"write_date,omitempty"`
 	WriteUid                 *Many2One `xmlrpc:"write_uid,omitempty"`
 }

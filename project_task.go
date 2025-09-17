@@ -46,6 +46,7 @@ type ProjectTask struct {
 	DisplayedImageId              *Many2One   `xmlrpc:"displayed_image_id,omitempty"`
 	DurationTracking              interface{} `xmlrpc:"duration_tracking,omitempty"`
 	EmailCc                       *String     `xmlrpc:"email_cc,omitempty"`
+	EmailFrom                     *String     `xmlrpc:"email_from,omitempty"`
 	HasLateAndUnreachedMilestone  *Bool       `xmlrpc:"has_late_and_unreached_milestone,omitempty"`
 	HasMessage                    *Bool       `xmlrpc:"has_message,omitempty"`
 	HtmlFieldHistory              interface{} `xmlrpc:"html_field_history,omitempty"`
@@ -67,7 +68,10 @@ type ProjectTask struct {
 	MyActivityDateDeadline        *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                          *String     `xmlrpc:"name,omitempty"`
 	ParentId                      *Many2One   `xmlrpc:"parent_id,omitempty"`
+	PartnerCompanyName            *String     `xmlrpc:"partner_company_name,omitempty"`
 	PartnerId                     *Many2One   `xmlrpc:"partner_id,omitempty"`
+	PartnerName                   *String     `xmlrpc:"partner_name,omitempty"`
+	PartnerPhone                  *String     `xmlrpc:"partner_phone,omitempty"`
 	PersonalStageId               *Many2One   `xmlrpc:"personal_stage_id,omitempty"`
 	PersonalStageTypeId           *Many2One   `xmlrpc:"personal_stage_type_id,omitempty"`
 	PersonalStageTypeIds          *Relation   `xmlrpc:"personal_stage_type_ids,omitempty"`
@@ -107,6 +111,7 @@ type ProjectTask struct {
 	TaskProperties                interface{} `xmlrpc:"task_properties,omitempty"`
 	TaskToInvoice                 *Bool       `xmlrpc:"task_to_invoice,omitempty"`
 	UserIds                       *Relation   `xmlrpc:"user_ids,omitempty"`
+	UserSkillIds                  *Relation   `xmlrpc:"user_skill_ids,omitempty"`
 	WebsiteMessageIds             *Relation   `xmlrpc:"website_message_ids,omitempty"`
 	WorkingDaysClose              *Float      `xmlrpc:"working_days_close,omitempty"`
 	WorkingDaysOpen               *Float      `xmlrpc:"working_days_open,omitempty"`

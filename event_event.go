@@ -66,6 +66,7 @@ type EventEvent struct {
 	Note                             *String     `xmlrpc:"note,omitempty"`
 	OrganizerId                      *Many2One   `xmlrpc:"organizer_id,omitempty"`
 	QuestionIds                      *Relation   `xmlrpc:"question_ids,omitempty"`
+	RatingIds                        *Relation   `xmlrpc:"rating_ids,omitempty"`
 	RegistrationIds                  *Relation   `xmlrpc:"registration_ids,omitempty"`
 	RegistrationPropertiesDefinition interface{} `xmlrpc:"registration_properties_definition,omitempty"`
 	SaleOrderLinesIds                *Relation   `xmlrpc:"sale_order_lines_ids,omitempty"`

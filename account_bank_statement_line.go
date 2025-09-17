@@ -195,6 +195,8 @@ type AccountBankStatementLine struct {
 	UblCiiXmlId                           *Many2One   `xmlrpc:"ubl_cii_xml_id,omitempty"`
 	UserId                                *Many2One   `xmlrpc:"user_id,omitempty"`
 	WebsiteMessageIds                     *Relation   `xmlrpc:"website_message_ids,omitempty"`
+	WipProductionCount                    *Int        `xmlrpc:"wip_production_count,omitempty"`
+	WipProductionIds                      *Relation   `xmlrpc:"wip_production_ids,omitempty"`
 	WriteDate                             *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                              *Many2One   `xmlrpc:"write_uid,omitempty"`
 }

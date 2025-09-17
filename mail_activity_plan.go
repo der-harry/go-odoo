@@ -2,20 +2,22 @@ package odoo
 
 // MailActivityPlan represents mail.activity.plan model.
 type MailActivityPlan struct {
-	Active          *Bool      `xmlrpc:"active,omitempty"`
-	CompanyId       *Many2One  `xmlrpc:"company_id,omitempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omitempty"`
-	HasUserOnDemand *Bool      `xmlrpc:"has_user_on_demand,omitempty"`
-	Id              *Int       `xmlrpc:"id,omitempty"`
-	Name            *String    `xmlrpc:"name,omitempty"`
-	ResModel        *Selection `xmlrpc:"res_model,omitempty"`
-	ResModelId      *Many2One  `xmlrpc:"res_model_id,omitempty"`
-	StepsCount      *Int       `xmlrpc:"steps_count,omitempty"`
-	TemplateIds     *Relation  `xmlrpc:"template_ids,omitempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omitempty"`
+	Active               *Bool      `xmlrpc:"active,omitempty"`
+	CompanyId            *Many2One  `xmlrpc:"company_id,omitempty"`
+	CreateDate           *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid            *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DepartmentAssignable *Bool      `xmlrpc:"department_assignable,omitempty"`
+	DepartmentId         *Many2One  `xmlrpc:"department_id,omitempty"`
+	DisplayName          *String    `xmlrpc:"display_name,omitempty"`
+	HasUserOnDemand      *Bool      `xmlrpc:"has_user_on_demand,omitempty"`
+	Id                   *Int       `xmlrpc:"id,omitempty"`
+	Name                 *String    `xmlrpc:"name,omitempty"`
+	ResModel             *Selection `xmlrpc:"res_model,omitempty"`
+	ResModelId           *Many2One  `xmlrpc:"res_model_id,omitempty"`
+	StepsCount           *Int       `xmlrpc:"steps_count,omitempty"`
+	TemplateIds          *Relation  `xmlrpc:"template_ids,omitempty"`
+	WriteDate            *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid             *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // MailActivityPlans represents array of mail.activity.plan model.

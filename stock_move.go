@@ -4,15 +4,22 @@ package odoo
 type StockMove struct {
 	AccountMoveIds                        *Relation  `xmlrpc:"account_move_ids,omitempty"`
 	Additional                            *Bool      `xmlrpc:"additional,omitempty"`
+	AllowedOperationIds                   *Relation  `xmlrpc:"allowed_operation_ids,omitempty"`
 	AnalyticAccountLineIds                *Relation  `xmlrpc:"analytic_account_line_ids,omitempty"`
 	Availability                          *Float     `xmlrpc:"availability,omitempty"`
+	BomLineId                             *Many2One  `xmlrpc:"bom_line_id,omitempty"`
+	ByproductId                           *Many2One  `xmlrpc:"byproduct_id,omitempty"`
 	CompanyId                             *Many2One  `xmlrpc:"company_id,omitempty"`
+	ConsumeUnbuildId                      *Many2One  `xmlrpc:"consume_unbuild_id,omitempty"`
+	CostShare                             *Float     `xmlrpc:"cost_share,omitempty"`
 	CreateDate                            *Time      `xmlrpc:"create_date,omitempty"`
 	CreateUid                             *Many2One  `xmlrpc:"create_uid,omitempty"`
+	CreatedProductionId                   *Many2One  `xmlrpc:"created_production_id,omitempty"`
 	CreatedPurchaseLineIds                *Relation  `xmlrpc:"created_purchase_line_ids,omitempty"`
 	Date                                  *Time      `xmlrpc:"date,omitempty"`
 	DateDeadline                          *Time      `xmlrpc:"date_deadline,omitempty"`
 	DelayAlertDate                        *Time      `xmlrpc:"delay_alert_date,omitempty"`
+	DescriptionBomLine                    *String    `xmlrpc:"description_bom_line,omitempty"`
 	DescriptionPicking                    *String    `xmlrpc:"description_picking,omitempty"`
 	DisplayAssignSerial                   *Bool      `xmlrpc:"display_assign_serial,omitempty"`
 	DisplayImportLot                      *Bool      `xmlrpc:"display_import_lot,omitempty"`
@@ -22,6 +29,7 @@ type StockMove struct {
 	GroupId                               *Many2One  `xmlrpc:"group_id,omitempty"`
 	HasTracking                           *Selection `xmlrpc:"has_tracking,omitempty"`
 	Id                                    *Int       `xmlrpc:"id,omitempty"`
+	IsDone                                *Bool      `xmlrpc:"is_done,omitempty"`
 	IsInitialDemandEditable               *Bool      `xmlrpc:"is_initial_demand_editable,omitempty"`
 	IsInventory                           *Bool      `xmlrpc:"is_inventory,omitempty"`
 	IsLocked                              *Bool      `xmlrpc:"is_locked,omitempty"`
@@ -33,6 +41,7 @@ type StockMove struct {
 	LocationId                            *Many2One  `xmlrpc:"location_id,omitempty"`
 	LocationUsage                         *Selection `xmlrpc:"location_usage,omitempty"`
 	LotIds                                *Relation  `xmlrpc:"lot_ids,omitempty"`
+	ManualConsumption                     *Bool      `xmlrpc:"manual_consumption,omitempty"`
 	MoveDestIds                           *Relation  `xmlrpc:"move_dest_ids,omitempty"`
 	MoveLineIds                           *Relation  `xmlrpc:"move_line_ids,omitempty"`
 	MoveLinesCount                        *Int       `xmlrpc:"move_lines_count,omitempty"`
@@ -41,6 +50,8 @@ type StockMove struct {
 	NeverProductTemplateAttributeValueIds *Relation  `xmlrpc:"never_product_template_attribute_value_ids,omitempty"`
 	NextSerial                            *String    `xmlrpc:"next_serial,omitempty"`
 	NextSerialCount                       *Int       `xmlrpc:"next_serial_count,omitempty"`
+	OperationId                           *Many2One  `xmlrpc:"operation_id,omitempty"`
+	OrderFinishedLotId                    *Many2One  `xmlrpc:"order_finished_lot_id,omitempty"`
 	OrderpointId                          *Many2One  `xmlrpc:"orderpoint_id,omitempty"`
 	Origin                                *String    `xmlrpc:"origin,omitempty"`
 	OriginReturnedMoveId                  *Many2One  `xmlrpc:"origin_returned_move_id,omitempty"`
@@ -59,13 +70,17 @@ type StockMove struct {
 	ProductPackagingQty                   *Float     `xmlrpc:"product_packaging_qty,omitempty"`
 	ProductPackagingQuantity              *Float     `xmlrpc:"product_packaging_quantity,omitempty"`
 	ProductQty                            *Float     `xmlrpc:"product_qty,omitempty"`
+	ProductQtyAvailable                   *Float     `xmlrpc:"product_qty_available,omitempty"`
 	ProductTmplId                         *Many2One  `xmlrpc:"product_tmpl_id,omitempty"`
 	ProductUom                            *Many2One  `xmlrpc:"product_uom,omitempty"`
 	ProductUomCategoryId                  *Many2One  `xmlrpc:"product_uom_category_id,omitempty"`
 	ProductUomQty                         *Float     `xmlrpc:"product_uom_qty,omitempty"`
+	ProductVirtualAvailable               *Float     `xmlrpc:"product_virtual_available,omitempty"`
+	ProductionId                          *Many2One  `xmlrpc:"production_id,omitempty"`
 	PropagateCancel                       *Bool      `xmlrpc:"propagate_cancel,omitempty"`
 	PurchaseLineId                        *Many2One  `xmlrpc:"purchase_line_id,omitempty"`
 	Quantity                              *Float     `xmlrpc:"quantity,omitempty"`
+	RawMaterialProductionId               *Many2One  `xmlrpc:"raw_material_production_id,omitempty"`
 	Reference                             *String    `xmlrpc:"reference,omitempty"`
 	ReservationDate                       *Time      `xmlrpc:"reservation_date,omitempty"`
 	RestrictPartnerId                     *Many2One  `xmlrpc:"restrict_partner_id,omitempty"`
@@ -76,6 +91,7 @@ type StockMove struct {
 	ScrapId                               *Many2One  `xmlrpc:"scrap_id,omitempty"`
 	Scrapped                              *Bool      `xmlrpc:"scrapped,omitempty"`
 	Sequence                              *Int       `xmlrpc:"sequence,omitempty"`
+	ShouldConsumeQty                      *Float     `xmlrpc:"should_consume_qty,omitempty"`
 	ShowDetailsVisible                    *Bool      `xmlrpc:"show_details_visible,omitempty"`
 	ShowLotsM2O                           *Bool      `xmlrpc:"show_lots_m2o,omitempty"`
 	ShowLotsText                          *Bool      `xmlrpc:"show_lots_text,omitempty"`
@@ -84,7 +100,10 @@ type StockMove struct {
 	State                                 *Selection `xmlrpc:"state,omitempty"`
 	StockValuationLayerIds                *Relation  `xmlrpc:"stock_valuation_layer_ids,omitempty"`
 	ToRefund                              *Bool      `xmlrpc:"to_refund,omitempty"`
+	UnbuildId                             *Many2One  `xmlrpc:"unbuild_id,omitempty"`
+	UnitFactor                            *Float     `xmlrpc:"unit_factor,omitempty"`
 	WarehouseId                           *Many2One  `xmlrpc:"warehouse_id,omitempty"`
+	WorkorderId                           *Many2One  `xmlrpc:"workorder_id,omitempty"`
 	WriteDate                             *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                              *Many2One  `xmlrpc:"write_uid,omitempty"`
 }

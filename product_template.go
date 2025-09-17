@@ -16,6 +16,9 @@ type ProductTemplate struct {
 	ActivityUserId                         *Many2One   `xmlrpc:"activity_user_id,omitempty"`
 	AttributeLineIds                       *Relation   `xmlrpc:"attribute_line_ids,omitempty"`
 	Barcode                                *String     `xmlrpc:"barcode,omitempty"`
+	BomCount                               *Int        `xmlrpc:"bom_count,omitempty"`
+	BomIds                                 *Relation   `xmlrpc:"bom_ids,omitempty"`
+	BomLineIds                             *Relation   `xmlrpc:"bom_line_ids,omitempty"`
 	CanImage1024BeZoomed                   *Bool       `xmlrpc:"can_image_1024_be_zoomed,omitempty"`
 	CategId                                *Many2One   `xmlrpc:"categ_id,omitempty"`
 	Color                                  *Int        `xmlrpc:"color,omitempty"`
@@ -48,6 +51,7 @@ type ProductTemplate struct {
 	IncomingQty                            *Float      `xmlrpc:"incoming_qty,omitempty"`
 	InvoicePolicy                          *Selection  `xmlrpc:"invoice_policy,omitempty"`
 	IsFavorite                             *Bool       `xmlrpc:"is_favorite,omitempty"`
+	IsKits                                 *Bool       `xmlrpc:"is_kits,omitempty"`
 	IsProductVariant                       *Bool       `xmlrpc:"is_product_variant,omitempty"`
 	IsStorable                             *Bool       `xmlrpc:"is_storable,omitempty"`
 	ListPrice                              *Float      `xmlrpc:"list_price,omitempty"`
@@ -63,6 +67,7 @@ type ProductTemplate struct {
 	MessageNeedaction                      *Bool       `xmlrpc:"message_needaction,omitempty"`
 	MessageNeedactionCounter               *Int        `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds                      *Relation   `xmlrpc:"message_partner_ids,omitempty"`
+	MrpProductQty                          *Float      `xmlrpc:"mrp_product_qty,omitempty"`
 	MyActivityDateDeadline                 *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                                   *String     `xmlrpc:"name,omitempty"`
 	NbrMovesIn                             *Int        `xmlrpc:"nbr_moves_in,omitempty"`
@@ -72,6 +77,7 @@ type ProductTemplate struct {
 	OutgoingQty                            *Float      `xmlrpc:"outgoing_qty,omitempty"`
 	PackagingIds                           *Relation   `xmlrpc:"packaging_ids,omitempty"`
 	PricelistItemCount                     *Int        `xmlrpc:"pricelist_item_count,omitempty"`
+	ProductAddMode                         *Selection  `xmlrpc:"product_add_mode,omitempty"`
 	ProductDocumentCount                   *Int        `xmlrpc:"product_document_count,omitempty"`
 	ProductDocumentIds                     *Relation   `xmlrpc:"product_document_ids,omitempty"`
 	ProductProperties                      interface{} `xmlrpc:"product_properties,omitempty"`
@@ -122,6 +128,7 @@ type ProductTemplate struct {
 	UomId                                  *Many2One   `xmlrpc:"uom_id,omitempty"`
 	UomName                                *String     `xmlrpc:"uom_name,omitempty"`
 	UomPoId                                *Many2One   `xmlrpc:"uom_po_id,omitempty"`
+	UsedInBomCount                         *Int        `xmlrpc:"used_in_bom_count,omitempty"`
 	ValidProductTemplateAttributeLineIds   *Relation   `xmlrpc:"valid_product_template_attribute_line_ids,omitempty"`
 	Valuation                              *Selection  `xmlrpc:"valuation,omitempty"`
 	VariantSellerIds                       *Relation   `xmlrpc:"variant_seller_ids,omitempty"`

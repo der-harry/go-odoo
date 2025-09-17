@@ -16,6 +16,7 @@ type SaleReport struct {
 	IndustryId             *Many2One  `xmlrpc:"industry_id,omitempty"`
 	InvoiceStatus          *Selection `xmlrpc:"invoice_status,omitempty"`
 	LineInvoiceStatus      *Selection `xmlrpc:"line_invoice_status,omitempty"`
+	Margin                 *Float     `xmlrpc:"margin,omitempty"`
 	MediumId               *Many2One  `xmlrpc:"medium_id,omitempty"`
 	Name                   *String    `xmlrpc:"name,omitempty"`
 	Nbr                    *Int       `xmlrpc:"nbr,omitempty"`

@@ -33,6 +33,7 @@ type ReportProjectTaskUser struct {
 	TagIds               *Relation  `xmlrpc:"tag_ids,omitempty"`
 	TaskId               *Many2One  `xmlrpc:"task_id,omitempty"`
 	UserIds              *Relation  `xmlrpc:"user_ids,omitempty"`
+	UserSkillIds         *Relation  `xmlrpc:"user_skill_ids,omitempty"`
 	WorkingDaysClose     *Float     `xmlrpc:"working_days_close,omitempty"`
 	WorkingDaysOpen      *Float     `xmlrpc:"working_days_open,omitempty"`
 	WorkingHoursClose    *Float     `xmlrpc:"working_hours_close,omitempty"`

@@ -34,6 +34,7 @@ type ProductCategory struct {
 	PropertyCostMethod                          *Selection  `xmlrpc:"property_cost_method,omitempty"`
 	PropertyStockAccountInputCategId            *Many2One   `xmlrpc:"property_stock_account_input_categ_id,omitempty"`
 	PropertyStockAccountOutputCategId           *Many2One   `xmlrpc:"property_stock_account_output_categ_id,omitempty"`
+	PropertyStockAccountProductionCostId        *Many2One   `xmlrpc:"property_stock_account_production_cost_id,omitempty"`
 	PropertyStockJournal                        *Many2One   `xmlrpc:"property_stock_journal,omitempty"`
 	PropertyStockValuationAccountId             *Many2One   `xmlrpc:"property_stock_valuation_account_id,omitempty"`
 	PropertyValuation                           *Selection  `xmlrpc:"property_valuation,omitempty"`

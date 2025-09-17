@@ -2,32 +2,34 @@ package odoo
 
 // MailActivitySchedule represents mail.activity.schedule model.
 type MailActivitySchedule struct {
-	ActivityCategory    *Selection `xmlrpc:"activity_category,omitempty"`
-	ActivityTypeId      *Many2One  `xmlrpc:"activity_type_id,omitempty"`
-	ActivityUserId      *Many2One  `xmlrpc:"activity_user_id,omitempty"`
-	ChainingType        *Selection `xmlrpc:"chaining_type,omitempty"`
-	CompanyId           *Many2One  `xmlrpc:"company_id,omitempty"`
-	CreateDate          *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid           *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DateDeadline        *Time      `xmlrpc:"date_deadline,omitempty"`
-	DisplayName         *String    `xmlrpc:"display_name,omitempty"`
-	Error               *String    `xmlrpc:"error,omitempty"`
-	HasError            *Bool      `xmlrpc:"has_error,omitempty"`
-	Id                  *Int       `xmlrpc:"id,omitempty"`
-	IsBatchMode         *Bool      `xmlrpc:"is_batch_mode,omitempty"`
-	Note                *String    `xmlrpc:"note,omitempty"`
-	PlanAvailableIds    *Relation  `xmlrpc:"plan_available_ids,omitempty"`
-	PlanDate            *Time      `xmlrpc:"plan_date,omitempty"`
-	PlanHasUserOnDemand *Bool      `xmlrpc:"plan_has_user_on_demand,omitempty"`
-	PlanId              *Many2One  `xmlrpc:"plan_id,omitempty"`
-	PlanOnDemandUserId  *Many2One  `xmlrpc:"plan_on_demand_user_id,omitempty"`
-	PlanSummary         *String    `xmlrpc:"plan_summary,omitempty"`
-	ResIds              *String    `xmlrpc:"res_ids,omitempty"`
-	ResModel            *String    `xmlrpc:"res_model,omitempty"`
-	ResModelId          *Many2One  `xmlrpc:"res_model_id,omitempty"`
-	Summary             *String    `xmlrpc:"summary,omitempty"`
-	WriteDate           *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid            *Many2One  `xmlrpc:"write_uid,omitempty"`
+	ActivityCategory         *Selection `xmlrpc:"activity_category,omitempty"`
+	ActivityTypeId           *Many2One  `xmlrpc:"activity_type_id,omitempty"`
+	ActivityUserId           *Many2One  `xmlrpc:"activity_user_id,omitempty"`
+	ChainingType             *Selection `xmlrpc:"chaining_type,omitempty"`
+	CompanyId                *Many2One  `xmlrpc:"company_id,omitempty"`
+	CreateDate               *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid                *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DateDeadline             *Time      `xmlrpc:"date_deadline,omitempty"`
+	DepartmentId             *Many2One  `xmlrpc:"department_id,omitempty"`
+	DisplayName              *String    `xmlrpc:"display_name,omitempty"`
+	Error                    *String    `xmlrpc:"error,omitempty"`
+	HasError                 *Bool      `xmlrpc:"has_error,omitempty"`
+	Id                       *Int       `xmlrpc:"id,omitempty"`
+	IsBatchMode              *Bool      `xmlrpc:"is_batch_mode,omitempty"`
+	Note                     *String    `xmlrpc:"note,omitempty"`
+	PlanAvailableIds         *Relation  `xmlrpc:"plan_available_ids,omitempty"`
+	PlanDate                 *Time      `xmlrpc:"plan_date,omitempty"`
+	PlanDepartmentFilterable *Bool      `xmlrpc:"plan_department_filterable,omitempty"`
+	PlanHasUserOnDemand      *Bool      `xmlrpc:"plan_has_user_on_demand,omitempty"`
+	PlanId                   *Many2One  `xmlrpc:"plan_id,omitempty"`
+	PlanOnDemandUserId       *Many2One  `xmlrpc:"plan_on_demand_user_id,omitempty"`
+	PlanSummary              *String    `xmlrpc:"plan_summary,omitempty"`
+	ResIds                   *String    `xmlrpc:"res_ids,omitempty"`
+	ResModel                 *String    `xmlrpc:"res_model,omitempty"`
+	ResModelId               *Many2One  `xmlrpc:"res_model_id,omitempty"`
+	Summary                  *String    `xmlrpc:"summary,omitempty"`
+	WriteDate                *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid                 *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // MailActivitySchedules represents array of mail.activity.schedule model.

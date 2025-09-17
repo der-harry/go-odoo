@@ -59,6 +59,7 @@ type PurchaseOrder struct {
 	MessageNeedaction            *Bool      `xmlrpc:"message_needaction,omitempty"`
 	MessageNeedactionCounter     *Int       `xmlrpc:"message_needaction_counter,omitempty"`
 	MessagePartnerIds            *Relation  `xmlrpc:"message_partner_ids,omitempty"`
+	MrpProductionCount           *Int       `xmlrpc:"mrp_production_count,omitempty"`
 	MyActivityDateDeadline       *Time      `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                         *String    `xmlrpc:"name,omitempty"`
 	Notes                        *String    `xmlrpc:"notes,omitempty"`

@@ -3,6 +3,7 @@ package odoo
 // ProductReplenish represents product.replenish model.
 type ProductReplenish struct {
 	AllowedRouteIds      *Relation `xmlrpc:"allowed_route_ids,omitempty"`
+	BomId                *Many2One `xmlrpc:"bom_id,omitempty"`
 	CompanyId            *Many2One `xmlrpc:"company_id,omitempty"`
 	CreateDate           *Time     `xmlrpc:"create_date,omitempty"`
 	CreateUid            *Many2One `xmlrpc:"create_uid,omitempty"`
@@ -18,6 +19,7 @@ type ProductReplenish struct {
 	ProductUomId         *Many2One `xmlrpc:"product_uom_id,omitempty"`
 	Quantity             *Float    `xmlrpc:"quantity,omitempty"`
 	RouteId              *Many2One `xmlrpc:"route_id,omitempty"`
+	ShowBom              *Bool     `xmlrpc:"show_bom,omitempty"`
 	ShowVendor           *Bool     `xmlrpc:"show_vendor,omitempty"`
 	SupplierId           *Many2One `xmlrpc:"supplier_id,omitempty"`
 	WarehouseId          *Many2One `xmlrpc:"warehouse_id,omitempty"`

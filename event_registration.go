@@ -47,6 +47,7 @@ type EventRegistration struct {
 	Name                        *String     `xmlrpc:"name,omitempty"`
 	PartnerId                   *Many2One   `xmlrpc:"partner_id,omitempty"`
 	Phone                       *String     `xmlrpc:"phone,omitempty"`
+	RatingIds                   *Relation   `xmlrpc:"rating_ids,omitempty"`
 	RegistrationAnswerChoiceIds *Relation   `xmlrpc:"registration_answer_choice_ids,omitempty"`
 	RegistrationAnswerIds       *Relation   `xmlrpc:"registration_answer_ids,omitempty"`
 	RegistrationProperties      interface{} `xmlrpc:"registration_properties,omitempty"`

@@ -7,6 +7,7 @@ type StockMoveLine struct {
 	CreateDate                 *Time      `xmlrpc:"create_date,omitempty"`
 	CreateUid                  *Many2One  `xmlrpc:"create_uid,omitempty"`
 	Date                       *Time      `xmlrpc:"date,omitempty"`
+	DescriptionBomLine         *String    `xmlrpc:"description_bom_line,omitempty"`
 	DescriptionPicking         *String    `xmlrpc:"description_picking,omitempty"`
 	DisplayName                *String    `xmlrpc:"display_name,omitempty"`
 	Id                         *Int       `xmlrpc:"id,omitempty"`
@@ -40,6 +41,7 @@ type StockMoveLine struct {
 	ProductPackagingQty        *Float     `xmlrpc:"product_packaging_qty,omitempty"`
 	ProductUomCategoryId       *Many2One  `xmlrpc:"product_uom_category_id,omitempty"`
 	ProductUomId               *Many2One  `xmlrpc:"product_uom_id,omitempty"`
+	ProductionId               *Many2One  `xmlrpc:"production_id,omitempty"`
 	QuantId                    *Many2One  `xmlrpc:"quant_id,omitempty"`
 	Quantity                   *Float     `xmlrpc:"quantity,omitempty"`
 	QuantityProductUom         *Float     `xmlrpc:"quantity_product_uom,omitempty"`
@@ -48,6 +50,7 @@ type StockMoveLine struct {
 	ScheduledDate              *Time      `xmlrpc:"scheduled_date,omitempty"`
 	State                      *Selection `xmlrpc:"state,omitempty"`
 	Tracking                   *Selection `xmlrpc:"tracking,omitempty"`
+	WorkorderId                *Many2One  `xmlrpc:"workorder_id,omitempty"`
 	WriteDate                  *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                   *Many2One  `xmlrpc:"write_uid,omitempty"`
 }

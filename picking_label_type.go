@@ -2,14 +2,15 @@ package odoo
 
 // PickingLabelType represents picking.label.type model.
 type PickingLabelType struct {
-	CreateDate  *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DisplayName *String    `xmlrpc:"display_name,omitempty"`
-	Id          *Int       `xmlrpc:"id,omitempty"`
-	LabelType   *Selection `xmlrpc:"label_type,omitempty"`
-	PickingIds  *Relation  `xmlrpc:"picking_ids,omitempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omitempty"`
+	CreateDate    *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid     *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DisplayName   *String    `xmlrpc:"display_name,omitempty"`
+	Id            *Int       `xmlrpc:"id,omitempty"`
+	LabelType     *Selection `xmlrpc:"label_type,omitempty"`
+	PickingIds    *Relation  `xmlrpc:"picking_ids,omitempty"`
+	ProductionIds *Relation  `xmlrpc:"production_ids,omitempty"`
+	WriteDate     *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid      *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // PickingLabelTypes represents array of picking.label.type model.

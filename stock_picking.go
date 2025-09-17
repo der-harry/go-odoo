@@ -27,6 +27,7 @@ type StockPicking struct {
 	DisplayName                 *String     `xmlrpc:"display_name,omitempty"`
 	GroupId                     *Many2One   `xmlrpc:"group_id,omitempty"`
 	HasDeadlineIssue            *Bool       `xmlrpc:"has_deadline_issue,omitempty"`
+	HasKits                     *Bool       `xmlrpc:"has_kits,omitempty"`
 	HasMessage                  *Bool       `xmlrpc:"has_message,omitempty"`
 	HasPackages                 *Bool       `xmlrpc:"has_packages,omitempty"`
 	HasScrapMove                *Bool       `xmlrpc:"has_scrap_move,omitempty"`
@@ -69,6 +70,8 @@ type StockPicking struct {
 	Printed                     *Bool       `xmlrpc:"printed,omitempty"`
 	Priority                    *Selection  `xmlrpc:"priority,omitempty"`
 	ProductId                   *Many2One   `xmlrpc:"product_id,omitempty"`
+	ProductionCount             *Int        `xmlrpc:"production_count,omitempty"`
+	ProductionIds               *Relation   `xmlrpc:"production_ids,omitempty"`
 	ProductsAvailability        *String     `xmlrpc:"products_availability,omitempty"`
 	ProductsAvailabilityState   *Selection  `xmlrpc:"products_availability_state,omitempty"`
 	ProjectId                   *Many2One   `xmlrpc:"project_id,omitempty"`

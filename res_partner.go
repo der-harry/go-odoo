@@ -28,6 +28,7 @@ type ResPartner struct {
 	Barcode                             *String     `xmlrpc:"barcode,omitempty"`
 	BuyerId                             *Many2One   `xmlrpc:"buyer_id,omitempty"`
 	CalendarLastNotifAck                *Time       `xmlrpc:"calendar_last_notif_ack,omitempty"`
+	CanPublish                          *Bool       `xmlrpc:"can_publish,omitempty"`
 	CategoryId                          *Relation   `xmlrpc:"category_id,omitempty"`
 	ChannelIds                          *Relation   `xmlrpc:"channel_ids,omitempty"`
 	ChildIds                            *Relation   `xmlrpc:"child_ids,omitempty"`
@@ -65,6 +66,9 @@ type ResPartner struct {
 	EmailFormatted                      *String     `xmlrpc:"email_formatted,omitempty"`
 	EmailNormalized                     *String     `xmlrpc:"email_normalized,omitempty"`
 	Employee                            *Bool       `xmlrpc:"employee,omitempty"`
+	EmployeeIds                         *Relation   `xmlrpc:"employee_ids,omitempty"`
+	EmployeesCount                      *Int        `xmlrpc:"employees_count,omitempty"`
+	EventCount                          *Int        `xmlrpc:"event_count,omitempty"`
 	FiscalCountryCodes                  *String     `xmlrpc:"fiscal_country_codes,omitempty"`
 	Function                            *String     `xmlrpc:"function,omitempty"`
 	HasMessage                          *Bool       `xmlrpc:"has_message,omitempty"`
@@ -90,6 +94,7 @@ type ResPartner struct {
 	IsCompany                           *Bool       `xmlrpc:"is_company,omitempty"`
 	IsPeppolEdiFormat                   *Bool       `xmlrpc:"is_peppol_edi_format,omitempty"`
 	IsPublic                            *Bool       `xmlrpc:"is_public,omitempty"`
+	IsPublished                         *Bool       `xmlrpc:"is_published,omitempty"`
 	IsUblFormat                         *Bool       `xmlrpc:"is_ubl_format,omitempty"`
 	JournalItemCount                    *Int        `xmlrpc:"journal_item_count,omitempty"`
 	Lang                                *Selection  `xmlrpc:"lang,omitempty"`
@@ -167,6 +172,8 @@ type ResPartner struct {
 	SpecificPropertyProductPricelist    *Many2One   `xmlrpc:"specific_property_product_pricelist,omitempty"`
 	StarredMessageIds                   *Relation   `xmlrpc:"starred_message_ids,omitempty"`
 	StateId                             *Many2One   `xmlrpc:"state_id,omitempty"`
+	StaticMapUrl                        *String     `xmlrpc:"static_map_url,omitempty"`
+	StaticMapUrlIsValid                 *Bool       `xmlrpc:"static_map_url_is_valid,omitempty"`
 	Street                              *String     `xmlrpc:"street,omitempty"`
 	Street2                             *String     `xmlrpc:"street2,omitempty"`
 	SupplierInvoiceCount                *Int        `xmlrpc:"supplier_invoice_count,omitempty"`
@@ -186,11 +193,15 @@ type ResPartner struct {
 	VatLabel                            *String     `xmlrpc:"vat_label,omitempty"`
 	ViesValid                           *Bool       `xmlrpc:"vies_valid,omitempty"`
 	ViesVatToCheck                      *String     `xmlrpc:"vies_vat_to_check,omitempty"`
+	VisitorIds                          *Relation   `xmlrpc:"visitor_ids,omitempty"`
 	Website                             *String     `xmlrpc:"website,omitempty"`
+	WebsiteId                           *Many2One   `xmlrpc:"website_id,omitempty"`
 	WebsiteMessageIds                   *Relation   `xmlrpc:"website_message_ids,omitempty"`
+	WebsitePublished                    *Bool       `xmlrpc:"website_published,omitempty"`
+	WebsiteUrl                          *String     `xmlrpc:"website_url,omitempty"`
 	WriteDate                           *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                            *Many2One   `xmlrpc:"write_uid,omitempty"`
-	XJahre                              *Int        `xmlrpc:"x_jahre,omitempty"`
+	XKind                               *String     `xmlrpc:"x_kind,omitempty"`
 	XYear                               *Int        `xmlrpc:"x_year,omitempty"`
 	Zip                                 *String     `xmlrpc:"zip,omitempty"`
 }

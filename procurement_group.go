@@ -2,18 +2,19 @@ package odoo
 
 // ProcurementGroup represents procurement.group model.
 type ProcurementGroup struct {
-	CreateDate      *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omitempty"`
-	Id              *Int       `xmlrpc:"id,omitempty"`
-	MoveType        *Selection `xmlrpc:"move_type,omitempty"`
-	Name            *String    `xmlrpc:"name,omitempty"`
-	PartnerId       *Many2One  `xmlrpc:"partner_id,omitempty"`
-	PurchaseLineIds *Relation  `xmlrpc:"purchase_line_ids,omitempty"`
-	SaleId          *Many2One  `xmlrpc:"sale_id,omitempty"`
-	StockMoveIds    *Relation  `xmlrpc:"stock_move_ids,omitempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omitempty"`
+	CreateDate       *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid        *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DisplayName      *String    `xmlrpc:"display_name,omitempty"`
+	Id               *Int       `xmlrpc:"id,omitempty"`
+	MoveType         *Selection `xmlrpc:"move_type,omitempty"`
+	MrpProductionIds *Relation  `xmlrpc:"mrp_production_ids,omitempty"`
+	Name             *String    `xmlrpc:"name,omitempty"`
+	PartnerId        *Many2One  `xmlrpc:"partner_id,omitempty"`
+	PurchaseLineIds  *Relation  `xmlrpc:"purchase_line_ids,omitempty"`
+	SaleId           *Many2One  `xmlrpc:"sale_id,omitempty"`
+	StockMoveIds     *Relation  `xmlrpc:"stock_move_ids,omitempty"`
+	WriteDate        *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid         *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // ProcurementGroups represents array of procurement.group model.
