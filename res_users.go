@@ -307,6 +307,7 @@ type ResUsers struct {
 	WriteDate                           *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                            *Many2One   `xmlrpc:"write_uid,omitempty"`
 	XKind                               *String     `xmlrpc:"x_kind,omitempty"`
+	XPrivate                            *Bool       `xmlrpc:"x_private,omitempty"`
 	XYear                               *Int        `xmlrpc:"x_year,omitempty"`
 	Zip                                 *String     `xmlrpc:"zip,omitempty"`
 }
